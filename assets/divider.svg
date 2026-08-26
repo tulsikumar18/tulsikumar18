@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 16" width="100%" height="100%">
+  <defs>
+    <linearGradient id="div-line" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0"/>
+      <stop offset="20%" stop-color="#00f2fe" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#818cf8" stop-opacity="1"/>
+      <stop offset="80%" stop-color="#00f5a0" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#00f5a0" stop-opacity="0"/>
+    </linearGradient>
+
+    <filter id="div-glow" x="-20%" y="-50%" width="140%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <line x1="10" y1="8" x2="890" y2="8" stroke="url(#div-line)" stroke-width="1.5" filter="url(#div-glow)"/>
+</svg>
