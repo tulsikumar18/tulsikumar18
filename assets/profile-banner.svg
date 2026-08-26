@@ -1,173 +1,179 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 240" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 250" width="100%" height="100%">
   <defs>
     <!-- Background Gradient -->
-    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="pb-bg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#0b0f19"/>
       <stop offset="50%" stop-color="#111827"/>
       <stop offset="100%" stop-color="#070a10"/>
     </linearGradient>
 
-    <!-- Border Gradient -->
-    <linearGradient id="border-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00f2fe"/>
-      <stop offset="50%" stop-color="#7f00ff"/>
-      <stop offset="100%" stop-color="#00f5a0"/>
+    <!-- Animated Border Gradient -->
+    <linearGradient id="pb-border" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe">
+        <animate attributeName="stop-color" values="#00f2fe;#7f00ff;#00f5a0;#00f2fe" dur="6s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="50%" stop-color="#7f00ff">
+        <animate attributeName="stop-color" values="#7f00ff;#00f5a0;#00f2fe;#7f00ff" dur="6s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#00f5a0">
+        <animate attributeName="stop-color" values="#00f5a0;#00f2fe;#7f00ff;#00f5a0" dur="6s" repeatCount="indefinite"/>
+      </stop>
     </linearGradient>
 
-    <!-- Text Glow Gradients -->
-    <linearGradient id="title-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#38bdf8"/>
-      <stop offset="50%" stop-color="#818cf8"/>
-      <stop offset="100%" stop-color="#c084fc"/>
+    <!-- Animated Title Gradient -->
+    <linearGradient id="pb-title" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8">
+        <animate attributeName="stop-color" values="#38bdf8;#818cf8;#c084fc;#38bdf8" dur="4s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="50%" stop-color="#818cf8">
+        <animate attributeName="stop-color" values="#818cf8;#c084fc;#38bdf8;#818cf8" dur="4s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#c084fc">
+        <animate attributeName="stop-color" values="#c084fc;#38bdf8;#818cf8;#c084fc" dur="4s" repeatCount="indefinite"/>
+      </stop>
     </linearGradient>
 
-    <linearGradient id="accent-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00f5a0"/>
-      <stop offset="100%" stop-color="#00d2ff"/>
+    <linearGradient id="pb-card" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.9"/>
     </linearGradient>
 
-    <!-- Card Background Gradient -->
-    <linearGradient id="card-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.7"/>
-      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.8"/>
-    </linearGradient>
-
-    <!-- Grid Pattern -->
-    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
-      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#334155" stroke-width="0.5" stroke-opacity="0.3"/>
+    <!-- Background Grid -->
+    <pattern id="pb-grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#334155" stroke-width="0.5" stroke-opacity="0.25"/>
       <circle cx="30" cy="0" r="1" fill="#38bdf8" opacity="0.3"/>
     </pattern>
 
-    <!-- Glow Filter -->
-    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+    <!-- Glow Filters -->
+    <filter id="pb-glow" x="-20%" y="-20%" width="140%" height="140%">
       <feGaussianBlur stdDeviation="4" result="blur"/>
       <feComposite in="SourceGraphic" in2="blur" operator="over"/>
     </filter>
-    <filter id="strong-glow" x="-30%" y="-30%" width="160%" height="160%">
+    <filter id="pb-strong-glow" x="-30%" y="-30%" width="160%" height="160%">
       <feGaussianBlur stdDeviation="8" result="blur"/>
       <feComposite in="SourceGraphic" in2="blur" operator="over"/>
     </filter>
   </defs>
 
-  <!-- Base Card -->
-  <rect x="2" y="2" width="896" height="236" rx="16" fill="url(#bg-grad)" stroke="url(#border-grad)" stroke-width="1.5"/>
+  <!-- Container Box -->
+  <rect x="2" y="2" width="896" height="246" rx="16" fill="url(#pb-bg)" stroke="url(#pb-border)" stroke-width="1.5"/>
+  <rect x="2" y="2" width="896" height="246" rx="16" fill="url(#pb-grid)"/>
 
-  <!-- Grid Overlay -->
-  <rect x="2" y="2" width="896" height="236" rx="16" fill="url(#grid)"/>
+  <!-- Top Ambient Lights -->
+  <circle cx="140" cy="40" r="90" fill="#38bdf8" opacity="0.06" filter="url(#pb-strong-glow)"/>
+  <circle cx="760" cy="190" r="100" fill="#7f00ff" opacity="0.06" filter="url(#pb-strong-glow)"/>
 
-  <!-- Top Ambient Glow Orbs -->
-  <circle cx="150" cy="40" r="80" fill="#38bdf8" opacity="0.08" filter="url(#strong-glow)"/>
-  <circle cx="750" cy="180" r="100" fill="#7f00ff" opacity="0.08" filter="url(#strong-glow)"/>
+  <!-- Tech Corner Markers -->
+  <path d="M 20 36 L 20 20 L 36 20" stroke="#00f2fe" stroke-width="2" fill="none" opacity="0.8"/>
+  <path d="M 880 36 L 880 20 L 864 20" stroke="#7f00ff" stroke-width="2" fill="none" opacity="0.8"/>
+  <path d="M 20 214 L 20 230 L 36 230" stroke="#00f5a0" stroke-width="2" fill="none" opacity="0.8"/>
+  <path d="M 880 214 L 880 230 L 864 230" stroke="#38bdf8" stroke-width="2" fill="none" opacity="0.8"/>
 
-  <!-- Decorative Corner Elements -->
-  <path d="M 20 40 L 20 20 L 40 20" stroke="#00f2fe" stroke-width="2" fill="none" opacity="0.8"/>
-  <path d="M 880 40 L 880 20 L 860 20" stroke="#7f00ff" stroke-width="2" fill="none" opacity="0.8"/>
-  <path d="M 20 200 L 20 220 L 40 220" stroke="#00f5a0" stroke-width="2" fill="none" opacity="0.8"/>
-  <path d="M 880 200 L 880 220 L 860 220" stroke="#38bdf8" stroke-width="2" fill="none" opacity="0.8"/>
-
-  <!-- Left Side: Profile Information -->
+  <!-- Left Side: Profile Info -->
   <!-- Status Badge -->
-  <g transform="translate(45, 36)">
-    <rect x="0" y="0" width="220" height="26" rx="13" fill="#0f172a" stroke="#38bdf8" stroke-width="1" opacity="0.9"/>
-    <circle cx="14" cy="13" r="4" fill="#00f5a0" filter="url(#glow)">
-      <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+  <g transform="translate(42, 34)">
+    <rect x="0" y="0" width="200" height="26" rx="13" fill="#0f172a" stroke="#38bdf8" stroke-width="1" opacity="0.9"/>
+    <circle cx="14" cy="13" r="4" fill="#00f5a0" filter="url(#pb-glow)">
+      <animate attributeName="opacity" values="1;0.2;1" dur="1.8s" repeatCount="indefinite"/>
     </circle>
-    <text x="26" y="17" font-family="ui-monospace, monospace" font-size="11" font-weight="600" fill="#38bdf8" letter-spacing="1">AI &amp; BACKEND ENGINEER</text>
+    <text x="26" y="17" font-family="ui-monospace, monospace" font-size="11" font-weight="700" fill="#38bdf8" letter-spacing="1">AI &amp; BACKEND ENGINEER</text>
   </g>
 
-  <!-- Main Name Title -->
-  <text x="45" y="102" font-family="'Segoe UI', Roboto, sans-serif" font-size="34" font-weight="800" fill="url(#title-grad)" letter-spacing="0.5">TULSI KUMAR YADAV</text>
+  <!-- Name Title -->
+  <text x="42" y="98" font-family="'Segoe UI', Roboto, sans-serif" font-size="30" font-weight="800" fill="url(#pb-title)" letter-spacing="0.5">TULSI KUMAR YADAV</text>
 
-  <!-- Tagline Subtitle -->
-  <text x="45" y="132" font-family="ui-monospace, monospace" font-size="14" font-weight="500" fill="#94a3b8" letter-spacing="0.5">
-    Software Engineer <tspan fill="#38bdf8">•</tspan> LLM &amp; RAG Developer <tspan fill="#818cf8">•</tspan> FastAPI &amp; Django
+  <!-- Subtitle Tagline (Generous Spacing to Prevent Overlapping) -->
+  <text x="42" y="130" font-family="ui-monospace, monospace" font-size="13" font-weight="500" fill="#94a3b8">
+    Software Engineer <tspan fill="#38bdf8">•</tspan> AI/ML &amp; RAG Developer
   </text>
 
   <!-- Domain Tags -->
-  <g transform="translate(45, 158)">
-    <!-- Tag 1 -->
-    <rect x="0" y="0" width="105" height="24" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
-    <text x="12" y="16" font-family="ui-monospace, monospace" font-size="11" fill="#38bdf8">🤖 LLM / RAG</text>
+  <g transform="translate(42, 160)">
+    <rect x="0" y="0" width="100" height="26" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="12" y="17" font-family="ui-monospace, monospace" font-size="11" fill="#38bdf8">🤖 LLM / RAG</text>
 
-    <!-- Tag 2 -->
-    <rect x="115" y="0" width="115" height="24" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
-    <text x="127" y="16" font-family="ui-monospace, monospace" font-size="11" fill="#00f5a0">⚡ FastAPI &amp; DB</text>
+    <rect x="110" y="0" width="110" height="26" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="122" y="17" font-family="ui-monospace, monospace" font-size="11" fill="#00f5a0">⚡ FastAPI &amp; DB</text>
 
-    <!-- Tag 3 -->
-    <rect x="240" y="0" width="115" height="24" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
-    <text x="252" y="16" font-family="ui-monospace, monospace" font-size="11" fill="#c084fc">🧠 Graph AI &amp; CV</text>
+    <rect x="230" y="0" width="110" height="26" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="242" y="17" font-family="ui-monospace, monospace" font-size="11" fill="#c084fc">🧠 Graph &amp; CV</text>
   </g>
 
-  <!-- Right Side: Animated Data Flow Architecture -->
-  <g transform="translate(430, 30)">
-    <!-- Architecture Container Box -->
-    <rect x="0" y="0" width="425" height="180" rx="12" fill="url(#card-grad)" stroke="#334155" stroke-width="1"/>
-    <text x="18" y="26" font-family="ui-monospace, monospace" font-size="11" font-weight="700" fill="#64748b" letter-spacing="1">SYSTEM ARCHITECTURE PIPELINE</text>
+  <!-- Right Side: Interactive Architecture Graph -->
+  <g transform="translate(440, 26)">
+    <!-- Container Card -->
+    <rect x="0" y="0" width="420" height="195" rx="12" fill="url(#pb-card)" stroke="#334155" stroke-width="1"/>
+    <text x="16" y="24" font-family="ui-monospace, monospace" font-size="10" font-weight="700" fill="#64748b" letter-spacing="1">SYSTEM ARCHITECTURE PIPELINE</text>
 
-    <!-- Connection Paths -->
-    <!-- Path 1: Python -> FastAPI -->
-    <path d="M 85 75 L 140 75" stroke="#38bdf8" stroke-width="2" stroke-dasharray="4 4">
+    <!-- Connecting Circuit Paths -->
+    <!-- Top Row: Python -> FastAPI -> LLMs -->
+    <path d="M 75 72 L 130 72" stroke="#38bdf8" stroke-width="2" stroke-dasharray="4 4">
       <animate attributeName="stroke-dashoffset" values="8;0" dur="1s" repeatCount="indefinite"/>
     </path>
-    <!-- Path 2: FastAPI -> RAG / LLM -->
-    <path d="M 225 75 L 280 75" stroke="#818cf8" stroke-width="2" stroke-dasharray="4 4">
-      <animate attributeName="stroke-dashoffset" values="8;0" dur="1s" repeatCount="indefinite"/>
-    </path>
-    <!-- Path 3: RAG -> Vector/Graph DB -->
-    <path d="M 335 95 L 335 125 L 225 125" stroke="#c084fc" stroke-width="2" stroke-dasharray="4 4">
-      <animate attributeName="stroke-dashoffset" values="8;0" dur="1s" repeatCount="indefinite"/>
-    </path>
-    <!-- Path 4: Vector/Graph -> Production AI -->
-    <path d="M 140 125 L 85 125" stroke="#00f5a0" stroke-width="2" stroke-dasharray="4 4">
+    <path d="M 205 72 L 255 72" stroke="#818cf8" stroke-width="2" stroke-dasharray="4 4">
       <animate attributeName="stroke-dashoffset" values="8;0" dur="1s" repeatCount="indefinite"/>
     </path>
 
-    <!-- Nodes Top Row -->
+    <!-- Vertical Drop: LLMs -> FAISS/Neo4j -->
+    <path d="M 320 94 L 320 135 L 320 135" stroke="#c084fc" stroke-width="2" stroke-dasharray="4 4">
+      <animate attributeName="stroke-dashoffset" values="8;0" dur="1s" repeatCount="indefinite"/>
+    </path>
+
+    <!-- Bottom Row: FAISS/Neo4j -> AI Apps -->
+    <path d="M 130 135 L 75 135" stroke="#00f5a0" stroke-width="2" stroke-dasharray="4 4">
+      <animate attributeName="stroke-dashoffset" values="8;0" dur="1s" repeatCount="indefinite"/>
+    </path>
+
+    <!-- Top Nodes -->
     <!-- Node 1: Python -->
-    <g transform="translate(18, 52)">
-      <rect x="0" y="0" width="68" height="44" rx="8" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5"/>
-      <text x="34" y="22" font-family="ui-monospace, monospace" font-size="11" font-weight="700" fill="#38bdf8" text-anchor="middle">Python</text>
-      <text x="34" y="34" font-family="ui-monospace, monospace" font-size="9" fill="#64748b" text-anchor="middle">Core</text>
+    <g transform="translate(16, 50)">
+      <rect x="0" y="0" width="58" height="44" rx="8" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5"/>
+      <text x="29" y="21" font-family="ui-monospace, monospace" font-size="11" font-weight="700" fill="#38bdf8" text-anchor="middle">Python</text>
+      <text x="29" y="33" font-family="ui-monospace, monospace" font-size="9" fill="#64748b" text-anchor="middle">Core</text>
     </g>
 
     <!-- Node 2: FastAPI -->
-    <g transform="translate(140, 52)">
-      <rect x="0" y="0" width="85" height="44" rx="8" fill="#0f172a" stroke="#00f5a0" stroke-width="1.5"/>
-      <text x="42.5" y="22" font-family="ui-monospace, monospace" font-size="11" font-weight="700" fill="#00f5a0" text-anchor="middle">FastAPI</text>
-      <text x="42.5" y="34" font-family="ui-monospace, monospace" font-size="9" fill="#64748b" text-anchor="middle">REST APIs</text>
+    <g transform="translate(130, 50)">
+      <rect x="0" y="0" width="75" height="44" rx="8" fill="#0f172a" stroke="#00f5a0" stroke-width="1.5"/>
+      <text x="37.5" y="21" font-family="ui-monospace, monospace" font-size="11" font-weight="700" fill="#00f5a0" text-anchor="middle">FastAPI</text>
+      <text x="37.5" y="33" font-family="ui-monospace, monospace" font-size="9" fill="#64748b" text-anchor="middle">REST APIs</text>
     </g>
 
-    <!-- Node 3: LLM & RAG -->
-    <g transform="translate(280, 52)">
-      <rect x="0" y="0" width="110" height="44" rx="8" fill="#0f172a" stroke="#818cf8" stroke-width="1.5" filter="url(#glow)"/>
-      <text x="55" y="22" font-family="ui-monospace, monospace" font-size="11" font-weight="700" fill="#818cf8" text-anchor="middle">LLMs &amp; RAG</text>
-      <text x="55" y="34" font-family="ui-monospace, monospace" font-size="9" fill="#94a3b8" text-anchor="middle">Transformers</text>
+    <!-- Node 3: LLMs & RAG (Floating Animation) -->
+    <g transform="translate(255, 50)">
+      <animateTransform attributeName="transform" type="translate" values="255,50; 255,47; 255,50" dur="3s" repeatCount="indefinite"/>
+      <rect x="0" y="0" width="135" height="44" rx="8" fill="#0f172a" stroke="#818cf8" stroke-width="1.5" filter="url(#pb-glow)"/>
+      <text x="67.5" y="21" font-family="ui-monospace, monospace" font-size="11" font-weight="700" fill="#818cf8" text-anchor="middle">LLMs &amp; RAG</text>
+      <text x="67.5" y="33" font-family="ui-monospace, monospace" font-size="9" fill="#94a3b8" text-anchor="middle">Transformers</text>
     </g>
 
-    <!-- Nodes Bottom Row -->
-    <!-- Node 4: Production AI Apps -->
-    <g transform="translate(18, 103)">
-      <rect x="0" y="0" width="68" height="44" rx="8" fill="#0f172a" stroke="#00d2ff" stroke-width="1.5"/>
-      <text x="34" y="22" font-family="ui-monospace, monospace" font-size="11" font-weight="700" fill="#00d2ff" text-anchor="middle">AI Apps</text>
-      <text x="34" y="34" font-family="ui-monospace, monospace" font-size="9" fill="#64748b" text-anchor="middle">Deploy</text>
+    <!-- Bottom Nodes -->
+    <!-- Node 4: AI Apps -->
+    <g transform="translate(16, 113)">
+      <rect x="0" y="0" width="58" height="44" rx="8" fill="#0f172a" stroke="#00d2ff" stroke-width="1.5"/>
+      <text x="29" y="21" font-family="ui-monospace, monospace" font-size="11" font-weight="700" fill="#00d2ff" text-anchor="middle">AI Apps</text>
+      <text x="29" y="33" font-family="ui-monospace, monospace" font-size="9" fill="#64748b" text-anchor="middle">Deploy</text>
     </g>
 
-    <!-- Node 5: FAISS & Neo4j -->
-    <g transform="translate(140, 103)">
-      <rect x="0" y="0" width="180" height="44" rx="8" fill="#0f172a" stroke="#c084fc" stroke-width="1.5"/>
-      <text x="90" y="22" font-family="ui-monospace, monospace" font-size="11" font-weight="700" fill="#c084fc" text-anchor="middle">FAISS &amp; Neo4j &amp; Supabase</text>
-      <text x="90" y="34" font-family="ui-monospace, monospace" font-size="9" fill="#64748b" text-anchor="middle">Vector Search &amp; Knowledge Graph</text>
+    <!-- Node 5: FAISS & Neo4j (Generous Width to Prevent Text Overflow) -->
+    <g transform="translate(130, 113)">
+      <rect x="0" y="0" width="260" height="44" rx="8" fill="#0f172a" stroke="#c084fc" stroke-width="1.5"/>
+      <text x="130" y="21" font-family="ui-monospace, monospace" font-size="11" font-weight="700" fill="#c084fc" text-anchor="middle">FAISS &amp; Neo4j &amp; Supabase</text>
+      <text x="130" y="33" font-family="ui-monospace, monospace" font-size="9" fill="#64748b" text-anchor="middle">Vector Search &amp; Knowledge Graph</text>
     </g>
 
-    <!-- Animated Pulsing Data Pulse -->
-    <circle cx="85" cy="75" r="3" fill="#00f2fe" filter="url(#glow)">
-      <animate attributeName="cx" values="85;140" dur="1.5s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;1;0" dur="1.5s" repeatCount="indefinite"/>
+    <!-- Moving Data Particles -->
+    <circle cx="75" cy="72" r="3" fill="#00f2fe" filter="url(#pb-glow)">
+      <animate attributeName="cx" values="75;130" dur="1.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;0" dur="1.2s" repeatCount="indefinite"/>
     </circle>
-
-    <circle cx="225" cy="75" r="3" fill="#818cf8" filter="url(#glow)">
-      <animate attributeName="cx" values="225;280" dur="1.5s" begin="0.5s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;1;0" dur="1.5s" begin="0.5s" repeatCount="indefinite"/>
+    <circle cx="205" cy="72" r="3" fill="#818cf8" filter="url(#pb-glow)">
+      <animate attributeName="cx" values="205;255" dur="1.2s" begin="0.4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;0" dur="1.2s" begin="0.4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="200" cy="135" r="3" fill="#00f5a0" filter="url(#pb-glow)">
+      <animate attributeName="cx" values="200;75" dur="1.4s" begin="0.7s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;0" dur="1.4s" begin="0.7s" repeatCount="indefinite"/>
     </circle>
   </g>
 </svg>

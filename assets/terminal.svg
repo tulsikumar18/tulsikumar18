@@ -1,89 +1,78 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 210" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 180" width="100%" height="100%">
   <defs>
-    <!-- Dark Glass Gradient -->
-    <linearGradient id="term-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="tm-bg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#0d1117"/>
       <stop offset="100%" stop-color="#161b22"/>
     </linearGradient>
 
-    <!-- Header Gradient -->
-    <linearGradient id="header-bg" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="tm-header" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#21262d"/>
       <stop offset="100%" stop-color="#161b22"/>
     </linearGradient>
 
-    <!-- Text Glow Filter -->
-    <filter id="green-glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="3" result="blur"/>
-      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
-    </filter>
-    <filter id="cyan-glow" x="-20%" y="-20%" width="140%" height="140%">
+    <filter id="tm-glow" x="-20%" y="-20%" width="140%" height="140%">
       <feGaussianBlur stdDeviation="3" result="blur"/>
       <feComposite in="SourceGraphic" in2="blur" operator="over"/>
     </filter>
   </defs>
 
-  <!-- Main Terminal Window Frame -->
-  <rect x="2" y="2" width="896" height="206" rx="10" fill="url(#term-bg)" stroke="#30363d" stroke-width="1.5"/>
+  <!-- Frame -->
+  <rect x="2" y="2" width="896" height="176" rx="10" fill="url(#tm-bg)" stroke="#30363d" stroke-width="1.5"/>
 
-  <!-- Terminal Window Title Bar -->
-  <path d="M 2 12 C 2 6.477 6.477 2 12 2 L 888 2 C 893.523 2 898 6.477 898 12 L 898 34 L 2 34 Z" fill="url(#header-bg)" stroke="#30363d" stroke-width="1"/>
+  <!-- Title Bar -->
+  <path d="M 2 10 C 2 5.5 5.5 2 10 2 L 890 2 C 894.5 2 898 5.5 898 10 L 898 30 L 2 30 Z" fill="url(#tm-header)" stroke="#30363d" stroke-width="1"/>
+  <circle cx="18" cy="16" r="5" fill="#ff5f56"/>
+  <circle cx="34" cy="16" r="5" fill="#ffbd2e"/>
+  <circle cx="50" cy="16" r="5" fill="#27c93f"/>
+  <text x="450" y="20" font-family="ui-monospace, SFMono-Regular, monospace" font-size="11" font-weight="600" fill="#8b949e" text-anchor="middle">tulsi@ai-engineer-workstation: ~ (zsh)</text>
 
-  <!-- Terminal Control Buttons -->
-  <circle cx="20" cy="18" r="6" fill="#ff5f56"/>
-  <circle cx="38" cy="18" r="6" fill="#ffbd2e"/>
-  <circle cx="56" cy="18" r="6" fill="#27c93f"/>
-
-  <!-- Terminal Window Title -->
-  <text x="450" y="22" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" font-weight="600" fill="#8b949e" text-anchor="middle">tulsi@ai-engineer-workstation: ~ (zsh)</text>
-
-  <!-- Terminal Content Lines -->
-  <!-- Line 1: Command prompt -->
-  <g transform="translate(25, 62)">
-    <text font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" font-weight="700">
+  <!-- Lines -->
+  <!-- Line 1: Command -->
+  <g transform="translate(24, 52)">
+    <text font-family="ui-monospace, SFMono-Regular, monospace" font-size="13" font-weight="700">
       <tspan fill="#58a6ff">tulsi@dev</tspan>:<tspan fill="#79c0ff">~</tspan><tspan fill="#8b949e">$</tspan> <tspan fill="#f0883e">whoami</tspan>
     </text>
   </g>
 
-  <!-- Line 2: Name result -->
-  <g transform="translate(25, 88)">
-    <text font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="800" fill="#38bdf8" filter="url(#cyan-glow)">
+  <!-- Line 2: Name -->
+  <g transform="translate(24, 76)">
+    <text font-family="ui-monospace, SFMono-Regular, monospace" font-size="15" font-weight="800" fill="#38bdf8" filter="url(#tm-glow)">
       Tulsi Kumar Yadav
     </text>
-    <text x="210" y="0" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#8b949e">
+    <text x="180" y="0" font-family="ui-monospace, SFMono-Regular, monospace" font-size="12" fill="#8b949e">
       [Software Engineer | AI/ML Engineer]
     </text>
   </g>
 
   <!-- Line 3: Output Bullet 1 -->
-  <g transform="translate(25, 114)">
-    <text font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">
+  <g transform="translate(24, 100)">
+    <text font-family="ui-monospace, SFMono-Regular, monospace" font-size="12">
       <tspan fill="#7ea5f8">&gt;</tspan> <tspan fill="#79c0ff">Building AI Systems</tspan> <tspan fill="#8b949e">...............</tspan> <tspan fill="#a5d6ff">LLMs, RAG &amp; Vector Databases (FAISS, Neo4j)</tspan>
     </text>
   </g>
 
   <!-- Line 4: Output Bullet 2 -->
-  <g transform="translate(25, 138)">
-    <text font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">
-      <tspan fill="#00f5a0">&gt;</tspan> <tspan fill="#56d364">Engineering Scalable APIs</tspan> <tspan fill="#8b949e">......</tspan> <tspan fill="#e6edf3">FastAPI, Django, Supabase &amp; Microservices</tspan>
+  <g transform="translate(24, 122)">
+    <text font-family="ui-monospace, SFMono-Regular, monospace" font-size="12">
+      <tspan fill="#00f5a0">&gt;</tspan> <tspan fill="#56d364">Engineering Scalable APIs</tspan> <tspan fill="#8b949e">......</tspan> <tspan fill="#e6edf3">FastAPI, Django &amp; Supabase Backends</tspan>
     </text>
   </g>
 
   <!-- Line 5: Output Bullet 3 -->
-  <g transform="translate(25, 162)">
-    <text font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">
+  <g transform="translate(24, 144)">
+    <text font-family="ui-monospace, SFMono-Regular, monospace" font-size="12">
       <tspan fill="#d2a8ff">&gt;</tspan> <tspan fill="#d2a8ff">Solving Real-World Problems</tspan> <tspan fill="#8b949e">....</tspan> <tspan fill="#ffa657">NLP, Computer Vision &amp; Graph Analytics</tspan>
     </text>
   </g>
 
   <!-- Line 6: Active Command Line with Blinking Cursor -->
-  <g transform="translate(25, 188)">
-    <text font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" font-weight="700">
-      <tspan fill="#58a6ff">tulsi@dev</tspan>:<tspan fill="#79c0ff">~</tspan><tspan fill="#8b949e">$</tspan> <tspan fill="#e6edf3">python3 -m execute_next_innovation</tspan>
+  <g transform="translate(24, 166)">
+    <text font-family="ui-monospace, SFMono-Regular, monospace" font-size="12" font-weight="700">
+      <tspan fill="#58a6ff">tulsi@dev</tspan>:<tspan fill="#79c0ff">~</tspan><tspan fill="#8b949e">$</tspan> <tspan fill="#e6edf3">python3 -m execute_innovation</tspan>
     </text>
 
     <!-- Blinking Cursor -->
-    <rect x="338" y="-12" width="8" height="15" fill="#58a6ff" filter="url(#green-glow)">
+    <rect x="312" y="-11" width="7" height="14" fill="#58a6ff" filter="url(#tm-glow)">
       <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
     </rect>
   </g>
