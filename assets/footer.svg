@@ -1,29 +1,73 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 50" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 60" width="100%" height="100%">
   <defs>
-    <linearGradient id="foot-3d-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <style>
+      .sf-foot-1 { animation: twinkleSF 2.1s ease-in-out infinite alternate; }
+      .sf-foot-2 { animation: twinkleSF 3.4s ease-in-out infinite alternate; }
+      @keyframes twinkleSF {
+        0% { opacity: 0.2; transform: scale(0.8); }
+        100% { opacity: 1; transform: scale(1.25); }
+      }
+    </style>
+
+    <radialGradient id="foot-space-dense" cx="50%" cy="100%" r="90%">
+      <stop offset="0%" stop-color="#0c193c"/>
+      <stop offset="70%" stop-color="#040a1d"/>
+      <stop offset="100%" stop-color="#02040b"/>
+    </radialGradient>
+
+    <linearGradient id="foot-title-grad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#38bdf8"/>
       <stop offset="50%" stop-color="#818cf8"/>
       <stop offset="100%" stop-color="#00f5a0"/>
     </linearGradient>
 
-    <filter id="foot-3d-glow" x="-20%" y="-20%" width="140%" height="140%">
+    <linearGradient id="m-trail-foot" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="50%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#7f00ff" stop-opacity="0"/>
+    </linearGradient>
+
+    <filter id="foot-glow-filter" x="-20%" y="-20%" width="140%" height="140%">
       <feGaussianBlur stdDeviation="3" result="blur"/>
       <feComposite in="SourceGraphic" in2="blur" operator="over"/>
     </filter>
   </defs>
 
-  <g transform="translate(0, 10)">
-    <line x1="50" y1="20" x2="330" y2="20" stroke="#1e293b" stroke-width="1.5"/>
-    <line x1="570" y1="20" x2="850" y2="20" stroke="#1e293b" stroke-width="1.5"/>
+  <rect x="2" y="2" width="896" height="56" rx="10" fill="url(#foot-space-dense)" stroke="#1e293b" stroke-width="1.2"/>
 
-    <text x="450" y="24" font-family="ui-monospace, SFMono-Regular, monospace" font-size="13" font-weight="700" fill="url(#foot-3d-grad)" text-anchor="middle" letter-spacing="3" filter="url(#foot-3d-glow)">
+  <!-- Multi-Colored Twinkling Starfield -->
+  <circle cx="60" cy="15" r="1.5" fill="#ffffff" class="sf-foot-1"/>
+  <circle cx="140" cy="35" r="1.8" fill="#fbbf24" class="sf-foot-2"/>
+  <circle cx="240" cy="12" r="1.3" fill="#38bdf8" class="sf-foot-1"/>
+  <circle cx="320" cy="42" r="2.0" fill="#7dd3fc" class="sf-foot-2"/>
+  <circle cx="580" cy="15" r="1.6" fill="#c084fc" class="sf-foot-1"/>
+  <circle cx="680" cy="38" r="1.9" fill="#fbbf24" class="sf-foot-2"/>
+  <circle cx="760" cy="12" r="1.4" fill="#ffffff" class="sf-foot-1"/>
+  <circle cx="840" cy="40" r="2.2" fill="#38bdf8" class="sf-foot-2"/>
+
+  <!-- Shooting Meteor Streak -->
+  <line x1="200" y1="5" x2="350" y2="25" stroke="url(#m-trail-foot)" stroke-width="1.8" opacity="0.85">
+    <animate attributeName="x1" values="-200;900" dur="3.5s" repeatCount="indefinite"/>
+    <animate attributeName="x2" values="-50;1050" dur="3.5s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- Planet Rim Glow at Bottom -->
+  <ellipse cx="450" cy="110" rx="350" ry="70" fill="#00f2fe" opacity="0.15" filter="url(#foot-glow-filter)"/>
+
+  <g transform="translate(0, 10)">
+    <line x1="50" y1="20" x2="320" y2="20" stroke="#1e293b" stroke-width="1.5"/>
+    <line x1="580" y1="20" x2="850" y2="20" stroke="#1e293b" stroke-width="1.5"/>
+
+    <text x="450" y="24" font-family="ui-monospace, SFMono-Regular, monospace" font-size="13" font-weight="700" fill="url(#foot-title-grad)" text-anchor="middle" letter-spacing="3" filter="url(#foot-glow-filter)">
       BUILD • LEARN • SOLVE
     </text>
 
-    <!-- Animated Pulsing 3D Particle Core -->
-    <circle cx="450" cy="40" r="3.5" fill="#38bdf8" filter="url(#foot-3d-glow)">
-      <animate attributeName="opacity" values="0.2;1;0.2" dur="2s" repeatCount="indefinite"/>
-      <animate attributeName="r" values="2.5;4;2.5" dur="2s" repeatCount="indefinite"/>
-    </circle>
+    <!-- Animated Pulsing Lens Flare Core -->
+    <g transform="translate(450, 42)">
+      <path d="M 0,-6 Q 0,0 6,0 Q 0,0 0,6 Q 0,0 -6,0 Q 0,0 0,-6 Z" fill="#ffffff" filter="url(#foot-glow-filter)"/>
+      <circle cx="0" cy="0" r="2" fill="#00f5a0">
+        <animate attributeName="r" values="1.5;3;1.5" dur="2s" repeatCount="indefinite"/>
+      </circle>
+    </g>
   </g>
 </svg>
