@@ -1,11 +1,5 @@
 <div align="center">
-  <img src="assets/profile-banner.svg" alt="Tulsi Kumar Yadav Profile Banner" width="100%" />
-</div>
-
-<br />
-
-<div align="center">
-  <img src="assets/terminal.svg" alt="Tulsi Kumar Yadav Terminal Animation" width="100%" />
+  <img src="assets/hero-3d.svg" alt="Tulsi Kumar Yadav 3D Developer Header" width="100%" />
 </div>
 
 <br />
@@ -42,7 +36,7 @@
 
 <br />
 
-<img src="assets/section-divider.svg" width="100%" />
+<img src="assets/3d-divider.svg" width="100%" />
 
 ## ⚡ About Me
 
@@ -69,7 +63,13 @@ I am a software engineer focused on building practical AI systems, LLM/RAG appli
 
 <br />
 
-<img src="assets/section-divider.svg" width="100%" />
+<div align="center">
+  <img src="assets/3d-architecture.svg" alt="3D Architecture Pipeline" width="100%" />
+</div>
+
+<br />
+
+<img src="assets/3d-divider.svg" width="100%" />
 
 ## 🚀 Featured Projects
 
@@ -110,7 +110,7 @@ I am a software engineer focused on building practical AI systems, LLM/RAG appli
 
 <br />
 
-<img src="assets/section-divider.svg" width="100%" />
+<img src="assets/3d-divider.svg" width="100%" />
 
 ## 🧰 Core Stack &amp; Achievements
 
@@ -129,7 +129,7 @@ I am a software engineer focused on building practical AI systems, LLM/RAG appli
 
 <br />
 
-<img src="assets/section-divider.svg" width="100%" />
+<img src="assets/3d-divider.svg" width="100%" />
 
 ## 📊 GitHub Activity
 
@@ -147,7 +147,7 @@ I am a software engineer focused on building practical AI systems, LLM/RAG appli
 
 <br />
 
-<img src="assets/section-divider.svg" width="100%" />
+<img src="assets/3d-divider.svg" width="100%" />
 
 <div align="center">
   <h3>Let's build something interesting.</h3>

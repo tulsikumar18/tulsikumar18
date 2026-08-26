@@ -1,12 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 60" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 50" width="100%" height="100%">
   <defs>
-    <linearGradient id="foot-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="foot-3d-grad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#38bdf8"/>
       <stop offset="50%" stop-color="#818cf8"/>
       <stop offset="100%" stop-color="#00f5a0"/>
     </linearGradient>
 
-    <filter id="foot-glow" x="-20%" y="-20%" width="140%" height="140%">
+    <filter id="foot-3d-glow" x="-20%" y="-20%" width="140%" height="140%">
       <feGaussianBlur stdDeviation="3" result="blur"/>
       <feComposite in="SourceGraphic" in2="blur" operator="over"/>
     </filter>
@@ -16,13 +16,14 @@
     <line x1="50" y1="20" x2="330" y2="20" stroke="#1e293b" stroke-width="1.5"/>
     <line x1="570" y1="20" x2="850" y2="20" stroke="#1e293b" stroke-width="1.5"/>
 
-    <text x="450" y="24" font-family="ui-monospace, SFMono-Regular, monospace" font-size="13" font-weight="600" fill="url(#foot-grad)" text-anchor="middle" letter-spacing="2">
-      " BUILD. LEARN. SOLVE. REPEAT. "
+    <text x="450" y="24" font-family="ui-monospace, SFMono-Regular, monospace" font-size="13" font-weight="700" fill="url(#foot-3d-grad)" text-anchor="middle" letter-spacing="3" filter="url(#foot-3d-glow)">
+      BUILD • LEARN • SOLVE
     </text>
 
-    <!-- Animated Pulsing Dot -->
-    <circle cx="450" cy="40" r="3" fill="#38bdf8" filter="url(#foot-glow)">
-      <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+    <!-- Animated Pulsing 3D Particle Core -->
+    <circle cx="450" cy="40" r="3.5" fill="#38bdf8" filter="url(#foot-3d-glow)">
+      <animate attributeName="opacity" values="0.2;1;0.2" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="2.5;4;2.5" dur="2s" repeatCount="indefinite"/>
     </circle>
   </g>
 </svg>
