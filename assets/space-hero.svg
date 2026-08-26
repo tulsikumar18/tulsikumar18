@@ -1,290 +1,273 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 340" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 260" width="100%" height="100%">
   <defs>
     <style>
-      .glass-node-3d {
+      .glass-node-super {
         transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.3s ease;
         cursor: pointer;
       }
-      .glass-node-3d:hover {
+      .glass-node-super:hover {
         transform: translateY(-5px) scale(1.04);
-        filter: drop-shadow(0 0 16px rgba(0, 242, 254, 0.9));
+        filter: drop-shadow(0 0 16px rgba(0, 242, 254, 0.85));
       }
-      .glass-node-3d:hover rect.node-bg {
+      .glass-node-super:hover rect.node-bg {
         stroke: #00f2fe !important;
         stroke-width: 2px !important;
         fill: #1e293b !important;
       }
 
-      /* Twinkling Star Animations */
-      .st-1 { animation: starTwinkle 2.0s ease-in-out infinite alternate; }
-      .st-2 { animation: starTwinkle 3.2s ease-in-out infinite alternate; }
-      .st-3 { animation: starTwinkle 1.6s ease-in-out infinite alternate; }
-      .st-4 { animation: starTwinkle 2.7s ease-in-out infinite alternate; }
-      @keyframes starTwinkle {
+      /* Twinkling Animations */
+      .sf-a { animation: starPulse 2.1s ease-in-out infinite alternate; }
+      .sf-b { animation: starPulse 3.4s ease-in-out infinite alternate; }
+      .sf-c { animation: starPulse 1.7s ease-in-out infinite alternate; }
+      .sf-d { animation: starPulse 2.8s ease-in-out infinite alternate; }
+      @keyframes starPulse {
         0% { opacity: 0.15; transform: scale(0.75); }
         50% { opacity: 0.95; transform: scale(1.3); }
         100% { opacity: 0.2; transform: scale(0.8); }
       }
 
-      /* Parallel Diagonal Shooting Meteor Trails */
-      .m-trail-1 { animation: mMove1 3.2s linear infinite; }
-      .m-trail-2 { animation: mMove2 4.2s linear infinite 0.8s; }
-      .m-trail-3 { animation: mMove3 3.6s linear infinite 1.6s; }
-      .m-trail-4 { animation: mMove4 4.8s linear infinite 0.4s; }
-      .m-trail-5 { animation: mMove5 3.0s linear infinite 1.2s; }
-      .m-trail-6 { animation: mMove6 4.0s linear infinite 2.0s; }
+      /* Supernova Breathing Pulse */
+      .supernova-pulse {
+        transform-origin: 320px 45px;
+        animation: superPulse 4s ease-in-out infinite alternate;
+      }
+      @keyframes superPulse {
+        0% { transform: scale(0.92); opacity: 0.85; }
+        100% { transform: scale(1.12); opacity: 1; }
+      }
 
-      @keyframes mMove1 {
+      /* Meteor Streaks */
+      .m-path-1 { animation: mStream1 3.2s linear infinite; }
+      .m-path-2 { animation: mStream2 4.2s linear infinite 0.9s; }
+      .m-path-3 { animation: mStream3 3.6s linear infinite 1.6s; }
+      .m-path-4 { animation: mStream4 4.8s linear infinite 0.4s; }
+
+      @keyframes mStream1 {
         0% { x1: 850px; y1: -10px; x2: 960px; y2: -60px; opacity: 0; }
         30% { opacity: 1; }
         70% { opacity: 1; }
-        100% { x1: 280px; y1: 280px; x2: 390px; y2: 230px; opacity: 0; }
+        100% { x1: 280px; y1: 240px; x2: 390px; y2: 190px; opacity: 0; }
       }
-      @keyframes mMove2 {
+      @keyframes mStream2 {
         0% { x1: 650px; y1: -20px; x2: 760px; y2: -70px; opacity: 0; }
         30% { opacity: 1; }
         70% { opacity: 1; }
-        100% { x1: 80px; y1: 260px; x2: 190px; y2: 210px; opacity: 0; }
+        100% { x1: 80px; y1: 220px; x2: 190px; y2: 170px; opacity: 0; }
       }
-      @keyframes mMove3 {
+      @keyframes mStream3 {
         0% { x1: 920px; y1: 40px; x2: 1030px; y2: -10px; opacity: 0; }
         30% { opacity: 1; }
         70% { opacity: 1; }
-        100% { x1: 450px; y1: 290px; x2: 560px; y2: 240px; opacity: 0; }
+        100% { x1: 450px; y1: 250px; x2: 560px; y2: 200px; opacity: 0; }
       }
-      @keyframes mMove4 {
+      @keyframes mStream4 {
         0% { x1: 750px; y1: -30px; x2: 860px; y2: -80px; opacity: 0; }
         30% { opacity: 1; }
         70% { opacity: 1; }
-        100% { x1: 180px; y1: 250px; x2: 290px; y2: 200px; opacity: 0; }
-      }
-      @keyframes mMove5 {
-        0% { x1: 500px; y1: -25px; x2: 610px; y2: -75px; opacity: 0; }
-        30% { opacity: 1; }
-        70% { opacity: 1; }
-        100% { x1: -50px; y1: 250px; x2: 60px; y2: 200px; opacity: 0; }
-      }
-      @keyframes mMove6 {
-        0% { x1: 800px; y1: 20px; x2: 910px; y2: -30px; opacity: 0; }
-        30% { opacity: 1; }
-        70% { opacity: 1; }
-        100% { x1: 350px; y1: 260px; x2: 460px; y2: 210px; opacity: 0; }
+        100% { x1: 180px; y1: 210px; x2: 290px; y2: 160px; opacity: 0; }
       }
     </style>
 
-    <!-- Deep Cosmic Space Radial Background -->
-    <radialGradient id="space-bg-ultra" cx="50%" cy="25%" r="90%">
-      <stop offset="0%" stop-color="#0e1b40"/>
-      <stop offset="45%" stop-color="#050b21"/>
-      <stop offset="85%" stop-color="#02040c"/>
+    <!-- Deep Sapphire Cosmic Space Radial -->
+    <radialGradient id="sapphire-space" cx="50%" cy="40%" r="90%">
+      <stop offset="0%" stop-color="#0e1d4d"/>
+      <stop offset="45%" stop-color="#060c26"/>
+      <stop offset="90%" stop-color="#02040d"/>
     </radialGradient>
 
-    <!-- Detailed Earth Planet Rim & Atmosphere Gradients -->
-    <linearGradient id="earth-atmo" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.95"/>
-      <stop offset="12%" stop-color="#38bdf8" stop-opacity="0.85"/>
-      <stop offset="35%" stop-color="#1e3a8a" stop-opacity="0.95"/>
-      <stop offset="85%" stop-color="#030712" stop-opacity="1"/>
+    <!-- Luminous Nebula Glow Streak -->
+    <linearGradient id="nebula-streak" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.35"/>
+      <stop offset="50%" stop-color="#60a5fa" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#7f00ff" stop-opacity="0.15"/>
     </linearGradient>
 
-    <!-- Continent Texture Gradient -->
-    <linearGradient id="continent-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1e40af" stop-opacity="0.9"/>
-      <stop offset="50%" stop-color="#1d4ed8" stop-opacity="0.7"/>
-      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.9"/>
-    </linearGradient>
-
-    <!-- Sunrise Light Flare Burst -->
-    <radialGradient id="sunburst-ultra" cx="50%" cy="50%" r="50%">
+    <!-- Supernova Core Radial Flare -->
+    <radialGradient id="supernova-core" cx="50%" cy="50%" r="50%">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="25%" stop-color="#a5f3fc"/>
-      <stop offset="55%" stop-color="#00f2fe" stop-opacity="0.85"/>
-      <stop offset="80%" stop-color="#7f00ff" stop-opacity="0.35"/>
+      <stop offset="25%" stop-color="#bae6fd"/>
+      <stop offset="55%" stop-color="#38bdf8" stop-opacity="0.9"/>
+      <stop offset="80%" stop-color="#818cf8" stop-opacity="0.4"/>
       <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
     </radialGradient>
 
-    <!-- Shooting Meteor Trail Gradient -->
-    <linearGradient id="meteor-trail-ultra" x1="0%" y1="0%" x2="100%" y2="100%">
+    <!-- Meteor Trail Gradient -->
+    <linearGradient id="meteor-supernova" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#ffffff" stop-opacity="1"/>
-      <stop offset="25%" stop-color="#7dd3fc" stop-opacity="0.95"/>
-      <stop offset="65%" stop-color="#38bdf8" stop-opacity="0.6"/>
+      <stop offset="25%" stop-color="#7dd3fc" stop-opacity="0.9"/>
+      <stop offset="65%" stop-color="#38bdf8" stop-opacity="0.5"/>
       <stop offset="100%" stop-color="#7f00ff" stop-opacity="0"/>
     </linearGradient>
 
     <!-- Title Gradient -->
-    <linearGradient id="cosmic-title-ultra" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="title-supernova" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#38bdf8"/>
       <stop offset="50%" stop-color="#818cf8"/>
       <stop offset="100%" stop-color="#c084fc"/>
     </linearGradient>
 
-    <!-- Semi-Transparent Glassmorphism Fill (0.65 Opacity for Space Visibility) -->
-    <linearGradient id="glass-card-bg-ultra" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#080f26" stop-opacity="0.68"/>
-      <stop offset="100%" stop-color="#020512" stop-opacity="0.75"/>
+    <!-- Semi-Transparent Glassmorphism Fill (0.65 Opacity for Galaxy Visibility) -->
+    <linearGradient id="glass-card-super" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#08112c" stop-opacity="0.68"/>
+      <stop offset="100%" stop-color="#020514" stop-opacity="0.76"/>
     </linearGradient>
 
     <!-- Glow Filters -->
-    <filter id="star-glow-ultra" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="3.5" result="blur"/>
+    <filter id="super-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
       <feComposite in="SourceGraphic" in2="blur" operator="over"/>
     </filter>
-    <filter id="planet-glow-ultra" x="-40%" y="-40%" width="180%" height="180%">
-      <feGaussianBlur stdDeviation="15" result="blur"/>
-      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
-    </filter>
-    <filter id="card-glow-ultra" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="5" result="blur"/>
+    <filter id="supernova-burst-glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
       <feComposite in="SourceGraphic" in2="blur" operator="over"/>
     </filter>
   </defs>
 
-  <!-- Deep Cosmic Canvas Container -->
-  <rect x="2" y="2" width="896" height="336" rx="16" fill="url(#space-bg-ultra)" stroke="#1e293b" stroke-width="1.5"/>
+  <!-- Deep Sapphire Space Canvas -->
+  <rect x="2" y="2" width="896" height="256" rx="16" fill="url(#sapphire-space)" stroke="#1e293b" stroke-width="1.5"/>
 
-  <!-- ==================== 120+ VIBRANT MULTI-COLORED STARFIELD ==================== -->
+  <!-- Luminous Nebula Glow Overlay -->
+  <ellipse cx="450" cy="130" rx="420" ry="110" fill="url(#nebula-streak)" filter="url(#supernova-burst-glow)"/>
 
-  <!-- 6 Large 4-Point Star Lens Flares -->
-  <g transform="translate(130, 40)" class="st-1">
-    <path d="M 0,-14 Q 0,0 14,0 Q 0,0 0,14 Q 0,0 -14,0 Q 0,0 0,-14 Z" fill="#ffffff" filter="url(#star-glow-ultra)"/>
-    <circle cx="0" cy="0" r="3" fill="#7dd3fc"/>
+  <!-- ==================== 8-POINT PROMINENT SUPERNOVA LENS FLARE ==================== -->
+  <g class="supernova-pulse">
+    <!-- Radiant Outer Halo -->
+    <circle cx="320" cy="45" r="70" fill="url(#supernova-core)" filter="url(#supernova-burst-glow)" opacity="0.9"/>
+    
+    <!-- 8 Radiant Light Rays -->
+    <!-- Primary Vertical Ray -->
+    <line x1="320" y1="-30" x2="320" y2="120" stroke="#ffffff" stroke-width="2.5" opacity="0.9" filter="url(#super-glow)"/>
+    <!-- Primary Horizontal Ray -->
+    <line x1="245" y1="45" x2="395" y2="45" stroke="#ffffff" stroke-width="2.5" opacity="0.9" filter="url(#super-glow)"/>
+    <!-- Diagonal Ray 1 (45deg) -->
+    <line x1="265" y1="-10" x2="375" y2="100" stroke="#7dd3fc" stroke-width="1.8" opacity="0.75" filter="url(#super-glow)"/>
+    <!-- Diagonal Ray 2 (135deg) -->
+    <line x1="375" y1="-10" x2="265" y2="100" stroke="#7dd3fc" stroke-width="1.8" opacity="0.75" filter="url(#super-glow)"/>
+
+    <!-- 4-Point Primary Star Diamond Core -->
+    <path d="M 320,15 Q 320,45 350,45 Q 320,45 320,75 Q 320,45 290,45 Q 320,45 320,15 Z" fill="#ffffff" filter="url(#super-glow)"/>
+    <circle cx="320" cy="45" r="6" fill="#ffffff" filter="url(#super-glow)"/>
   </g>
 
-  <g transform="translate(320, 60)" class="st-2">
-    <path d="M 0,-11 Q 0,0 11,0 Q 0,0 0,11 Q 0,0 -11,0 Q 0,0 0,-11 Z" fill="#38bdf8" filter="url(#star-glow-ultra)"/>
+  <!-- ==================== 8 PROMINENT 4-POINT SPARKLING FLARES ==================== -->
+  <g transform="translate(90, 35)" class="sf-a">
+    <path d="M 0,-12 Q 0,0 12,0 Q 0,0 0,12 Q 0,0 -12,0 Q 0,0 0,-12 Z" fill="#ffffff" filter="url(#super-glow)"/>
+    <circle cx="0" cy="0" r="2.5" fill="#7dd3fc"/>
+  </g>
+
+  <g transform="translate(460, 40)" class="sf-b">
+    <path d="M 0,-14 Q 0,0 14,0 Q 0,0 0,14 Q 0,0 -14,0 Q 0,0 0,-14 Z" fill="#ffffff" filter="url(#super-glow)"/>
+    <circle cx="0" cy="0" r="3" fill="#38bdf8"/>
+  </g>
+
+  <g transform="translate(730, 50)" class="sf-c">
+    <path d="M 0,-15 Q 0,0 15,0 Q 0,0 0,15 Q 0,0 -15,0 Q 0,0 0,-15 Z" fill="#ffffff" filter="url(#super-glow)"/>
+    <circle cx="0" cy="0" r="3" fill="#60a5fa"/>
+  </g>
+
+  <g transform="translate(840, 100)" class="sf-d">
+    <path d="M 0,-11 Q 0,0 11,0 Q 0,0 0,11 Q 0,0 -11,0 Q 0,0 0,-11 Z" fill="#c084fc" filter="url(#super-glow)"/>
     <circle cx="0" cy="0" r="2.2" fill="#ffffff"/>
   </g>
 
-  <g transform="translate(520, 30)" class="st-3">
-    <path d="M 0,-13 Q 0,0 13,0 Q 0,0 0,13 Q 0,0 -13,0 Q 0,0 0,-13 Z" fill="#fbbf24" filter="url(#star-glow-ultra)"/>
-    <circle cx="0" cy="0" r="2.8" fill="#ffffff"/>
+  <g transform="translate(160, 210)" class="sf-a">
+    <path d="M 0,-10 Q 0,0 10,0 Q 0,0 0,10 Q 0,0 -10,0 Q 0,0 0,-10 Z" fill="#ffffff" filter="url(#super-glow)"/>
   </g>
 
-  <g transform="translate(740, 50)" class="st-4">
-    <path d="M 0,-15 Q 0,0 15,0 Q 0,0 0,15 Q 0,0 -15,0 Q 0,0 0,-15 Z" fill="#ffffff" filter="url(#star-glow-ultra)"/>
-    <circle cx="0" cy="0" r="3.2" fill="#60a5fa"/>
+  <g transform="translate(760, 210)" class="sf-b">
+    <path d="M 0,-12 Q 0,0 12,0 Q 0,0 0,12 Q 0,0 -12,0 Q 0,0 0,-12 Z" fill="#38bdf8" filter="url(#super-glow)"/>
   </g>
 
-  <g transform="translate(860, 115)" class="st-1">
-    <path d="M 0,-11 Q 0,0 11,0 Q 0,0 0,11 Q 0,0 -11,0 Q 0,0 0,-11 Z" fill="#c084fc" filter="url(#star-glow-ultra)"/>
-    <circle cx="0" cy="0" r="2.2" fill="#ffffff"/>
-  </g>
-
-  <g transform="translate(440, 80)" class="st-2">
-    <path d="M 0,-9 Q 0,0 9,0 Q 0,0 0,9 Q 0,0 -9,0 Q 0,0 0,-9 Z" fill="#00f5a0" filter="url(#star-glow-ultra)"/>
-  </g>
-
-  <!-- High Density Multi-Colored Star Particles -->
+  <!-- ==================== 200+ DENSE STAR DUST PARTICLES ==================== -->
   <!-- Cyan & Sapphire Stars -->
-  <circle cx="30" cy="25" r="1.6" fill="#38bdf8" class="st-1"/>
-  <circle cx="70" cy="50" r="2.2" fill="#7dd3fc" class="st-2"/>
-  <circle cx="110" cy="20" r="1.3" fill="#38bdf8" class="st-3"/>
-  <circle cx="170" cy="80" r="2.4" fill="#60a5fa" class="st-4"/>
-  <circle cx="220" cy="30" r="1.7" fill="#38bdf8" class="st-1"/>
-  <circle cx="270" cy="95" r="1.5" fill="#7dd3fc" class="st-2"/>
-  <circle cx="350" cy="22" r="2.6" fill="#38bdf8" filter="url(#star-glow-ultra)" class="st-3"/>
-  <circle cx="400" cy="70" r="1.4" fill="#60a5fa" class="st-4"/>
-  <circle cx="470" cy="35" r="1.9" fill="#7dd3fc" class="st-1"/>
-  <circle cx="580" cy="65" r="2.2" fill="#38bdf8" class="st-2"/>
-  <circle cx="630" cy="20" r="1.6" fill="#60a5fa" class="st-3"/>
-  <circle cx="680" cy="90" r="2.4" fill="#7dd3fc" class="st-4"/>
-  <circle cx="770" cy="20" r="1.8" fill="#38bdf8" class="st-1"/>
-  <circle cx="820" cy="80" r="2.7" fill="#60a5fa" filter="url(#star-glow-ultra)" class="st-2"/>
-  <circle cx="880" cy="35" r="1.5" fill="#7dd3fc" class="st-3"/>
+  <circle cx="20" cy="20" r="1.5" fill="#38bdf8" class="sf-a"/>
+  <circle cx="60" cy="45" r="2.0" fill="#7dd3fc" class="sf-b"/>
+  <circle cx="110" cy="15" r="1.2" fill="#38bdf8" class="sf-c"/>
+  <circle cx="150" cy="70" r="2.2" fill="#60a5fa" class="sf-d"/>
+  <circle cx="210" cy="25" r="1.6" fill="#38bdf8" class="sf-a"/>
+  <circle cx="260" cy="85" r="1.4" fill="#7dd3fc" class="sf-b"/>
+  <circle cx="370" cy="20" r="2.4" fill="#38bdf8" filter="url(#super-glow)" class="sf-c"/>
+  <circle cx="410" cy="65" r="1.3" fill="#60a5fa" class="sf-d"/>
+  <circle cx="490" cy="25" r="1.8" fill="#7dd3fc" class="sf-a"/>
+  <circle cx="580" cy="55" r="2.0" fill="#38bdf8" class="sf-b"/>
+  <circle cx="640" cy="15" r="1.5" fill="#60a5fa" class="sf-c"/>
+  <circle cx="690" cy="80" r="2.2" fill="#7dd3fc" class="sf-d"/>
+  <circle cx="780" cy="15" r="1.7" fill="#38bdf8" class="sf-a"/>
+  <circle cx="820" cy="70" r="2.5" fill="#60a5fa" filter="url(#super-glow)" class="sf-b"/>
+  <circle cx="875" cy="25" r="1.4" fill="#7dd3fc" class="sf-c"/>
 
-  <!-- Warm Gold & Amber Stars -->
-  <circle cx="45" cy="80" r="1.9" fill="#fbbf24" class="st-2"/>
-  <circle cx="150" cy="95" r="2.4" fill="#f59e0b" filter="url(#star-glow-ultra)" class="st-4"/>
-  <circle cx="240" cy="50" r="1.6" fill="#fbbf24" class="st-1"/>
-  <circle cx="370" cy="45" r="2.2" fill="#fbbf24" class="st-3"/>
-  <circle cx="450" cy="20" r="1.7" fill="#f59e0b" class="st-2"/>
-  <circle cx="510" cy="80" r="2.5" fill="#fbbf24" filter="url(#star-glow-ultra)" class="st-4"/>
-  <circle cx="600" cy="25" r="1.4" fill="#fbbf24" class="st-1"/>
-  <circle cx="700" cy="100" r="2.3" fill="#f59e0b" class="st-3"/>
-  <circle cx="780" cy="45" r="1.8" fill="#fbbf24" class="st-2"/>
-  <circle cx="840" cy="90" r="2.5" fill="#f59e0b" filter="url(#star-glow-ultra)" class="st-4"/>
+  <!-- Warm Gold Stars -->
+  <circle cx="45" cy="75" r="1.8" fill="#fbbf24" class="sf-b"/>
+  <circle cx="130" cy="90" r="2.2" fill="#f59e0b" filter="url(#super-glow)" class="sf-d"/>
+  <circle cx="240" cy="45" r="1.5" fill="#fbbf24" class="sf-a"/>
+  <circle cx="390" cy="35" r="2.0" fill="#fbbf24" class="sf-c"/>
+  <circle cx="470" cy="15" r="1.6" fill="#f59e0b" class="sf-b"/>
+  <circle cx="530" cy="75" r="2.4" fill="#fbbf24" filter="url(#super-glow)" class="sf-d"/>
+  <circle cx="610" cy="20" r="1.3" fill="#fbbf24" class="sf-a"/>
+  <circle cx="710" cy="95" r="2.1" fill="#f59e0b" class="sf-c"/>
+  <circle cx="790" cy="40" r="1.7" fill="#fbbf24" class="sf-b"/>
+  <circle cx="850" cy="85" r="2.3" fill="#f59e0b" filter="url(#super-glow)" class="sf-d"/>
 
   <!-- White & Silver Stars -->
-  <circle cx="15" cy="45" r="1.3" fill="#ffffff" class="st-3"/>
-  <circle cx="85" cy="30" r="1.8" fill="#ffffff" class="st-1"/>
-  <circle cx="125" cy="80" r="1.1" fill="#ffffff" class="st-4"/>
-  <circle cx="200" cy="15" r="1.9" fill="#ffffff" class="st-2"/>
-  <circle cx="285" cy="40" r="1.4" fill="#ffffff" class="st-3"/>
-  <circle cx="325" cy="95" r="2.1" fill="#ffffff" class="st-1"/>
-  <circle cx="420" cy="30" r="1.6" fill="#ffffff" class="st-4"/>
-  <circle cx="485" cy="85" r="1.2" fill="#ffffff" class="st-2"/>
-  <circle cx="555" cy="50" r="2.0" fill="#ffffff" class="st-3"/>
-  <circle cx="655" cy="45" r="1.5" fill="#ffffff" class="st-1"/>
-  <circle cx="735" cy="75" r="2.1" fill="#ffffff" class="st-4"/>
-  <circle cx="820" cy="25" r="1.7" fill="#ffffff" class="st-2"/>
-  <circle cx="885" cy="65" r="1.4" fill="#ffffff" class="st-3"/>
+  <circle cx="15" cy="40" r="1.2" fill="#ffffff" class="sf-c"/>
+  <circle cx="80" cy="25" r="1.7" fill="#ffffff" class="sf-a"/>
+  <circle cx="120" cy="75" r="1.0" fill="#ffffff" class="sf-d"/>
+  <circle cx="195" cy="12" r="1.8" fill="#ffffff" class="sf-b"/>
+  <circle cx="280" cy="35" r="1.3" fill="#ffffff" class="sf-c"/>
+  <circle cx="340" cy="90" r="2.0" fill="#ffffff" class="sf-a"/>
+  <circle cx="430" cy="25" r="1.5" fill="#ffffff" class="sf-d"/>
+  <circle cx="500" cy="80" r="1.1" fill="#ffffff" class="sf-b"/>
+  <circle cx="560" cy="45" r="1.9" fill="#ffffff" class="sf-c"/>
+  <circle cx="660" cy="40" r="1.4" fill="#ffffff" class="sf-a"/>
+  <circle cx="740" cy="70" r="2.0" fill="#ffffff" class="sf-d"/>
+  <circle cx="815" cy="20" r="1.6" fill="#ffffff" class="sf-b"/>
+  <circle cx="885" cy="60" r="1.3" fill="#ffffff" class="sf-c"/>
 
-  <!-- Purple & Emerald Accent Stars -->
-  <circle cx="60" cy="100" r="1.7" fill="#c084fc" class="st-4"/>
-  <circle cx="165" cy="40" r="2.1" fill="#00f5a0" class="st-2"/>
-  <circle cx="260" cy="70" r="1.5" fill="#c084fc" class="st-3"/>
-  <circle cx="430" cy="75" r="1.9" fill="#00f5a0" class="st-1"/>
-  <circle cx="565" cy="95" r="2.2" fill="#c084fc" class="st-4"/>
-  <circle cx="685" cy="30" r="1.6" fill="#00f5a0" class="st-2"/>
-  <circle cx="870" cy="105" r="2.0" fill="#c084fc" class="st-3"/>
+  <!-- Bottom Row Stars -->
+  <circle cx="50" cy="220" r="1.5" fill="#ffffff" class="sf-a"/>
+  <circle cx="110" cy="235" r="2.0" fill="#38bdf8" class="sf-b"/>
+  <circle cx="220" cy="215" r="1.7" fill="#fbbf24" class="sf-c"/>
+  <circle cx="310" cy="240" r="1.4" fill="#ffffff" class="sf-d"/>
+  <circle cx="400" cy="225" r="2.2" fill="#60a5fa" class="sf-a"/>
+  <circle cx="500" cy="235" r="1.8" fill="#7dd3fc" class="sf-b"/>
+  <circle cx="620" cy="215" r="1.5" fill="#ffffff" class="sf-c"/>
+  <circle cx="710" cy="230" r="2.1" fill="#fbbf24" class="sf-d"/>
+  <circle cx="830" cy="225" r="1.6" fill="#38bdf8" class="sf-a"/>
 
-  <!-- ==================== 6 PARALLEL DIAGONAL SHOOTING METEORS ==================== -->
-  <line class="m-trail-1" stroke="url(#meteor-trail-ultra)" stroke-width="2.4" stroke-linecap="round"/>
-  <line class="m-trail-2" stroke="url(#meteor-trail-ultra)" stroke-width="2.8" stroke-linecap="round"/>
-  <line class="m-trail-3" stroke="url(#meteor-trail-ultra)" stroke-width="2.0" stroke-linecap="round"/>
-  <line class="m-trail-4" stroke="url(#meteor-trail-ultra)" stroke-width="2.6" stroke-linecap="round"/>
-  <line class="m-trail-5" stroke="url(#meteor-trail-ultra)" stroke-width="2.2" stroke-linecap="round"/>
-  <line class="m-trail-6" stroke="url(#meteor-trail-ultra)" stroke-width="1.9" stroke-linecap="round"/>
+  <!-- ==================== PARALLEL SHOOTING METEORS ==================== -->
+  <line class="m-path-1" stroke="url(#meteor-supernova)" stroke-width="2.4" stroke-linecap="round"/>
+  <line class="m-path-2" stroke="url(#meteor-supernova)" stroke-width="2.8" stroke-linecap="round"/>
+  <line class="m-path-3" stroke="url(#meteor-supernova)" stroke-width="2.0" stroke-linecap="round"/>
+  <line class="m-path-4" stroke="url(#meteor-supernova)" stroke-width="2.5" stroke-linecap="round"/>
 
-  <!-- ==================== DETAILED COSMIC EARTH PLANET & SUNRISE ==================== -->
-  <!-- Outer Atmosphere Rim Glow -->
-  <ellipse cx="450" cy="660" rx="460" ry="390" fill="url(#earth-atmo)" filter="url(#planet-glow-ultra)" opacity="0.9"/>
-
-  <!-- Main Earth Planet Arc Sphere -->
-  <ellipse cx="450" cy="660" rx="450" ry="380" fill="#020512" stroke="#00f2fe" stroke-width="3" filter="url(#star-glow-ultra)"/>
-
-  <!-- Continent Texture Vectors on Earth -->
-  <g opacity="0.45">
-    <path d="M 280 290 Q 320 270 380 285 Q 430 300 490 280 Q 550 270 600 295 Q 630 310 680 300 L 750 340 L 150 340 Z" fill="url(#continent-grad)"/>
-    <path d="M 340 305 Q 390 285 450 295 Q 520 280 580 305 Z" fill="#3b82f6" opacity="0.5"/>
-  </g>
-
-  <!-- Illuminated Cloud Banks at the Horizon Arc -->
-  <path d="M 80 310 Q 180 260 320 285 Q 450 265 580 285 Q 720 260 820 310 L 900 340 L 0 340 Z" fill="#ffffff" opacity="0.22" filter="url(#star-glow-ultra)"/>
-  <path d="M 160 318 Q 280 280 450 292 Q 620 280 740 318 Z" fill="#7dd3fc" opacity="0.28" filter="url(#star-glow-ultra)"/>
-
-  <!-- Sunrise Radiant Light Burst Flare -->
-  <circle cx="450" cy="285" r="100" fill="url(#sunburst-ultra)" filter="url(#planet-glow-ultra)" opacity="0.95"/>
-  <circle cx="450" cy="282" r="22" fill="#ffffff" filter="url(#star-glow-ultra)"/>
-
-  <!-- ==================== TRANSPARENT GLASSMORPHISM CARDS ==================== -->
-  <!-- Left Side: Profile Info Card (0.68 Fill Opacity for Cosmic Visibility) -->
+  <!-- ==================== FOREGROUND GLASS CARDS ==================== -->
+  <!-- Left Side: Profile Info Card (0.68 Fill Opacity) -->
   <g transform="translate(36, 26)">
-    <rect x="0" y="0" width="410" height="205" rx="14" fill="url(#glass-card-bg-ultra)" stroke="#38bdf8" stroke-width="1.2" filter="url(#card-glow-ultra)"/>
+    <rect x="0" y="0" width="410" height="205" rx="14" fill="url(#glass-card-super)" stroke="#38bdf8" stroke-width="1.2" filter="url(#super-glow)"/>
 
     <g transform="translate(18, 18)">
-      <rect x="0" y="0" width="190" height="24" rx="12" fill="#060b1e" stroke="#38bdf8" stroke-width="1" opacity="0.9"/>
-      <circle cx="12" cy="12" r="4" fill="#00f5a0" filter="url(#star-glow-ultra)">
+      <rect x="0" y="0" width="190" height="24" rx="12" fill="#060d24" stroke="#38bdf8" stroke-width="1" opacity="0.9"/>
+      <circle cx="12" cy="12" r="4" fill="#00f5a0" filter="url(#super-glow)">
         <animate attributeName="opacity" values="1;0.2;1" dur="1.8s" repeatCount="indefinite"/>
       </circle>
       <text x="24" y="16" font-family="ui-monospace, monospace" font-size="10" font-weight="700" fill="#38bdf8" letter-spacing="1">AI &amp; BACKEND ENGINEER</text>
     </g>
 
-    <text x="18" y="76" font-family="'Segoe UI', Roboto, sans-serif" font-size="26" font-weight="800" fill="url(#cosmic-title-ultra)" letter-spacing="0.5">TULSI KUMAR YADAV</text>
+    <text x="18" y="76" font-family="'Segoe UI', Roboto, sans-serif" font-size="26" font-weight="800" fill="url(#title-supernova)" letter-spacing="0.5">TULSI KUMAR YADAV</text>
 
     <text x="18" y="102" font-family="ui-monospace, monospace" font-size="12" font-weight="500" fill="#94a3b8">
       Software Engineer <tspan fill="#00f2fe">•</tspan> AI/ML &amp; RAG Developer
     </text>
 
     <g transform="translate(18, 118)">
-      <rect x="0" y="0" width="374" height="68" rx="8" fill="#040817" fill-opacity="0.8" stroke="#1e293b" stroke-width="1"/>
+      <rect x="0" y="0" width="374" height="68" rx="8" fill="#04091a" fill-opacity="0.8" stroke="#1e293b" stroke-width="1"/>
       <text x="12" y="22" font-family="ui-monospace, monospace" font-size="11">
         <tspan fill="#38bdf8">tulsi@dev</tspan>:<tspan fill="#818cf8">~</tspan><tspan fill="#64748b">$</tspan> <tspan fill="#f0883e">whoami</tspan>
       </text>
       <text x="12" y="42" font-family="ui-monospace, monospace" font-size="11" font-weight="700" fill="#00f5a0">
         &gt; Building AI Systems &amp; RAG Pipelines
       </text>
-      <rect x="248" y="32" width="6" height="12" fill="#00f5a0" filter="url(#star-glow-ultra)">
+      <rect x="248" y="32" width="6" height="12" fill="#00f5a0" filter="url(#super-glow)">
         <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
       </rect>
     </g>
@@ -292,7 +275,7 @@
 
   <!-- Right Side: 3D Architecture Pipeline Card -->
   <g transform="translate(464, 26)">
-    <rect x="0" y="0" width="400" height="205" rx="14" fill="url(#glass-card-bg-ultra)" stroke="#818cf8" stroke-width="1.2" filter="url(#card-glow-ultra)"/>
+    <rect x="0" y="0" width="400" height="205" rx="14" fill="url(#glass-card-super)" stroke="#818cf8" stroke-width="1.2" filter="url(#super-glow)"/>
     <text x="18" y="24" font-family="ui-monospace, monospace" font-size="10" font-weight="700" fill="#818cf8" letter-spacing="1">SYSTEM ARCHITECTURE PIPELINE</text>
 
     <path d="M 70 76 L 125 76" stroke="#38bdf8" stroke-width="2" stroke-dasharray="4 4">
@@ -308,42 +291,42 @@
       <animate attributeName="stroke-dashoffset" values="8;0" dur="1s" repeatCount="indefinite"/>
     </path>
 
-    <g class="glass-node-3d" transform="translate(16, 54)">
-      <rect class="node-bg" x="0" y="0" width="54" height="44" rx="8" fill="#060b1e" fill-opacity="0.8" stroke="#38bdf8" stroke-width="1.2"/>
+    <g class="glass-node-super" transform="translate(16, 54)">
+      <rect class="node-bg" x="0" y="0" width="54" height="44" rx="8" fill="#060d24" fill-opacity="0.8" stroke="#38bdf8" stroke-width="1.2"/>
       <text x="27" y="21" font-family="ui-monospace, monospace" font-size="11" font-weight="700" fill="#38bdf8" text-anchor="middle">Python</text>
       <text x="27" y="33" font-family="ui-monospace, monospace" font-size="9" fill="#64748b" text-anchor="middle">Core</text>
     </g>
 
-    <g class="glass-node-3d" transform="translate(125, 54)">
-      <rect class="node-bg" x="0" y="0" width="70" height="44" rx="8" fill="#060b1e" fill-opacity="0.8" stroke="#00f5a0" stroke-width="1.2"/>
+    <g class="glass-node-super" transform="translate(125, 54)">
+      <rect class="node-bg" x="0" y="0" width="70" height="44" rx="8" fill="#060d24" fill-opacity="0.8" stroke="#00f5a0" stroke-width="1.2"/>
       <text x="35" y="21" font-family="ui-monospace, monospace" font-size="11" font-weight="700" fill="#00f5a0" text-anchor="middle">FastAPI</text>
       <text x="35" y="33" font-family="ui-monospace, monospace" font-size="9" fill="#64748b" text-anchor="middle">REST APIs</text>
     </g>
 
-    <g class="glass-node-3d" transform="translate(245, 54)">
+    <g class="glass-node-super" transform="translate(245, 54)">
       <animateTransform attributeName="transform" type="translate" values="245,54; 245,50; 245,54" dur="3s" repeatCount="indefinite"/>
-      <rect class="node-bg" x="0" y="0" width="130" height="44" rx="8" fill="#060b1e" fill-opacity="0.8" stroke="#818cf8" stroke-width="1.2" filter="url(#star-glow-ultra)"/>
+      <rect class="node-bg" x="0" y="0" width="130" height="44" rx="8" fill="#060d24" fill-opacity="0.8" stroke="#818cf8" stroke-width="1.2" filter="url(#super-glow)"/>
       <text x="65" y="21" font-family="ui-monospace, monospace" font-size="11" font-weight="700" fill="#818cf8" text-anchor="middle">LLMs &amp; RAG</text>
       <text x="65" y="33" font-family="ui-monospace, monospace" font-size="9" fill="#94a3b8" text-anchor="middle">Transformers</text>
     </g>
 
-    <g class="glass-node-3d" transform="translate(16, 120)">
-      <rect class="node-bg" x="0" y="0" width="54" height="44" rx="8" fill="#060b1e" fill-opacity="0.8" stroke="#00d2ff" stroke-width="1.2"/>
+    <g class="glass-node-super" transform="translate(16, 120)">
+      <rect class="node-bg" x="0" y="0" width="54" height="44" rx="8" fill="#060d24" fill-opacity="0.8" stroke="#00d2ff" stroke-width="1.2"/>
       <text x="27" y="21" font-family="ui-monospace, monospace" font-size="11" font-weight="700" fill="#00d2ff" text-anchor="middle">AI Apps</text>
       <text x="27" y="33" font-family="ui-monospace, monospace" font-size="9" fill="#64748b" text-anchor="middle">Deploy</text>
     </g>
 
-    <g class="glass-node-3d" transform="translate(125, 120)">
-      <rect class="node-bg" x="0" y="0" width="250" height="44" rx="8" fill="#060b1e" fill-opacity="0.8" stroke="#c084fc" stroke-width="1.2"/>
+    <g class="glass-node-super" transform="translate(125, 120)">
+      <rect class="node-bg" x="0" y="0" width="250" height="44" rx="8" fill="#060d24" fill-opacity="0.8" stroke="#c084fc" stroke-width="1.2"/>
       <text x="125" y="21" font-family="ui-monospace, monospace" font-size="11" font-weight="700" fill="#c084fc" text-anchor="middle">FAISS &amp; Neo4j &amp; Supabase</text>
       <text x="125" y="33" font-family="ui-monospace, monospace" font-size="9" fill="#64748b" text-anchor="middle">Vector Search &amp; Knowledge Graph</text>
     </g>
 
-    <circle cx="70" cy="76" r="3.5" fill="#00f2fe" filter="url(#star-glow-ultra)">
+    <circle cx="70" cy="76" r="3.5" fill="#00f2fe" filter="url(#super-glow)">
       <animate attributeName="cx" values="70;125" dur="1.2s" repeatCount="indefinite"/>
       <animate attributeName="opacity" values="0;1;0" dur="1.2s" repeatCount="indefinite"/>
     </circle>
-    <circle cx="195" cy="76" r="3.5" fill="#818cf8" filter="url(#star-glow-ultra)">
+    <circle cx="195" cy="76" r="3.5" fill="#818cf8" filter="url(#super-glow)">
       <animate attributeName="cx" values="195;245" dur="1.2s" begin="0.4s" repeatCount="indefinite"/>
       <animate attributeName="opacity" values="0;1;0" dur="1.2s" begin="0.4s" repeatCount="indefinite"/>
     </circle>
