@@ -1,61 +1,84 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 30" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 24" width="100%" height="100%">
   <defs>
     <style>
-      .sf-div-1 { animation: twinkleSF 2.1s ease-in-out infinite alternate; }
-      .sf-div-2 { animation: twinkleSF 3.4s ease-in-out infinite alternate; }
-      @keyframes twinkleSF {
+      .sf-pulse-1 { animation: starTwinkle 2.0s ease-in-out infinite alternate; }
+      .sf-pulse-2 { animation: starTwinkle 3.2s ease-in-out infinite alternate; }
+      .sf-pulse-3 { animation: starTwinkle 1.7s ease-in-out infinite alternate; }
+      @keyframes starTwinkle {
         0% { opacity: 0.2; transform: scale(0.8); }
-        100% { opacity: 1; transform: scale(1.25); }
+        50% { opacity: 1.0; transform: scale(1.3); }
+        100% { opacity: 0.25; transform: scale(0.85); }
+      }
+
+      .center-flare-pulse {
+        animation: centerPulse 2.5s ease-in-out infinite alternate;
+        transform-origin: 450px 12px;
+      }
+      @keyframes centerPulse {
+        0% { transform: scale(0.9); opacity: 0.85; }
+        100% { transform: scale(1.2); opacity: 1.0; }
       }
     </style>
 
-    <linearGradient id="cosmic-line-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0"/>
-      <stop offset="15%" stop-color="#00f2fe" stop-opacity="0.9"/>
-      <stop offset="50%" stop-color="#7f00ff" stop-opacity="1"/>
-      <stop offset="85%" stop-color="#00f5a0" stop-opacity="0.9"/>
-      <stop offset="100%" stop-color="#00f5a0" stop-opacity="0"/>
-    </linearGradient>
-
-    <linearGradient id="m-trail-dense" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="50%" stop-color="#38bdf8"/>
-      <stop offset="100%" stop-color="#7f00ff" stop-opacity="0"/>
-    </linearGradient>
-
-    <filter id="c-div-glow" x="-20%" y="-50%" width="140%" height="200%">
-      <feGaussianBlur stdDeviation="3" result="blur"/>
+    <filter id="star-divider-glow-v2" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3.5" result="blur"/>
       <feComposite in="SourceGraphic" in2="blur" operator="over"/>
     </filter>
   </defs>
 
-  <!-- Twinkling Star Dots across divider -->
-  <circle cx="60" cy="8" r="1.5" fill="#38bdf8" class="sf-div-1"/>
-  <circle cx="150" cy="22" r="1.8" fill="#fbbf24" class="sf-div-2"/>
-  <circle cx="280" cy="7" r="1.3" fill="#ffffff" class="sf-div-1"/>
-  <circle cx="360" cy="24" r="2.0" fill="#7dd3fc" class="sf-div-2"/>
-  <circle cx="580" cy="6" r="1.6" fill="#c084fc" class="sf-div-1"/>
-  <circle cx="690" cy="22" r="1.9" fill="#fbbf24" class="sf-div-2"/>
-  <circle cx="780" cy="8" r="1.4" fill="#ffffff" class="sf-div-1"/>
-  <circle cx="850" cy="23" r="2.1" fill="#38bdf8" class="sf-div-2"/>
+  <!-- Deep Space Canvas -->
+  <rect width="900" height="24" fill="none"/>
 
-  <!-- Parallel Shooting Meteors -->
-  <line x1="100" y1="2" x2="250" y2="22" stroke="url(#m-trail-dense)" stroke-width="1.8" opacity="0.9">
-    <animate attributeName="x1" values="-200;900" dur="3.2s" repeatCount="indefinite"/>
-    <animate attributeName="x2" values="-50;1050" dur="3.2s" repeatCount="indefinite"/>
-  </line>
+  <!-- ==================== MOVING STAR PARTICLES ==================== -->
+  <!-- Moving Star Particle Stream 1 (Left to Right) -->
+  <circle cx="100" cy="12" r="3" fill="#00f2fe" filter="url(#star-divider-glow-v2)">
+    <animate attributeName="cx" values="60;840;60" dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="6s" repeatCount="indefinite"/>
+  </circle>
 
-  <line x1="500" y1="0" x2="650" y2="20" stroke="url(#m-trail-dense)" stroke-width="1.6" opacity="0.8">
-    <animate attributeName="x1" values="-300;800" dur="3.8s" begin="1s" repeatCount="indefinite"/>
-    <animate attributeName="x2" values="-150;950" dur="3.8s" begin="1s" repeatCount="indefinite"/>
-  </line>
+  <!-- Moving Star Particle Stream 2 (Right to Left) -->
+  <circle cx="800" cy="12" r="2.5" fill="#818cf8" filter="url(#star-divider-glow-v2)">
+    <animate attributeName="cx" values="840;60;840" dur="7s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="7s" repeatCount="indefinite"/>
+  </circle>
 
-  <!-- Axis Line -->
-  <line x1="20" y1="15" x2="880" y2="15" stroke="url(#cosmic-line-grad)" stroke-width="2" filter="url(#c-div-glow)"/>
+  <!-- Moving Star Particle Stream 3 (Center Wave) -->
+  <circle cx="450" cy="12" r="3.5" fill="#00f5a0" filter="url(#star-divider-glow-v2)">
+    <animate attributeName="cx" values="250;650;250" dur="4.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.2;1;0.2" dur="4.5s" repeatCount="indefinite"/>
+  </circle>
 
-  <!-- Center Glowing Star Lens Flare -->
-  <g transform="translate(450, 15)">
-    <path d="M 0,-8 Q 0,0 8,0 Q 0,0 0,8 Q 0,0 -8,0 Q 0,0 0,-8 Z" fill="#ffffff" filter="url(#c-div-glow)"/>
-    <circle cx="0" cy="0" r="2.5" fill="#00f5a0"/>
+  <!-- ==================== PROMINENT CENTER STAR LENS FLARE ==================== -->
+  <g class="center-flare-pulse" transform="translate(450, 12)">
+    <path d="M 0,-10 Q 0,0 10,0 Q 0,0 0,10 Q 0,0 -10,0 Q 0,0 0,-10 Z" fill="#ffffff" filter="url(#star-divider-glow-v2)"/>
+    <circle cx="0" cy="0" r="2.5" fill="#00f5a0" filter="url(#star-divider-glow-v2)"/>
   </g>
+
+  <!-- Side Lens Flares -->
+  <g transform="translate(180, 12)" class="sf-pulse-1">
+    <path d="M 0,-7 Q 0,0 7,0 Q 0,0 0,7 Q 0,0 -7,0 Q 0,0 0,-7 Z" fill="#ffffff" filter="url(#star-divider-glow-v2)"/>
+    <circle cx="0" cy="0" r="1.5" fill="#7dd3fc"/>
+  </g>
+
+  <g transform="translate(720, 12)" class="sf-pulse-3">
+    <path d="M 0,-7 Q 0,0 7,0 Q 0,0 0,7 Q 0,0 -7,0 Q 0,0 0,-7 Z" fill="#38bdf8" filter="url(#star-divider-glow-v2)"/>
+    <circle cx="0" cy="0" r="1.5" fill="#ffffff"/>
+  </g>
+
+  <!-- ==================== DENSE STARFIELD PARTICLES ==================== -->
+  <circle cx="30" cy="8" r="1.5" fill="#38bdf8" class="sf-pulse-1"/>
+  <circle cx="80" cy="16" r="1.8" fill="#fbbf24" class="sf-pulse-2"/>
+  <circle cx="130" cy="6" r="1.2" fill="#ffffff" class="sf-pulse-3"/>
+  <circle cx="230" cy="18" r="2.0" fill="#7dd3fc" class="sf-pulse-1"/>
+  <circle cx="280" cy="8" r="1.4" fill="#ffffff" class="sf-pulse-2"/>
+  <circle cx="340" cy="15" r="1.9" fill="#fbbf24" class="sf-pulse-3"/>
+  <circle cx="390" cy="6" r="1.3" fill="#60a5fa" class="sf-pulse-1"/>
+
+  <circle cx="510" cy="18" r="1.6" fill="#c084fc" class="sf-pulse-2"/>
+  <circle cx="570" cy="7" r="2.1" fill="#7dd3fc" filter="url(#star-divider-glow-v2)" class="sf-pulse-3"/>
+  <circle cx="630" cy="16" r="1.4" fill="#ffffff" class="sf-pulse-1"/>
+  <circle cx="670" cy="5" r="1.8" fill="#fbbf24" class="sf-pulse-2"/>
+  <circle cx="770" cy="17" r="1.5" fill="#38bdf8" class="sf-pulse-3"/>
+  <circle cx="820" cy="7" r="2.0" fill="#ffffff" class="sf-pulse-1"/>
+  <circle cx="870" cy="15" r="1.3" fill="#60a5fa" class="sf-pulse-2"/>
 </svg>
