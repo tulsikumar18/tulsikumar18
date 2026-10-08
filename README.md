@@ -105,7 +105,7 @@ I am a software engineer focused on building practical AI systems, LLM/RAG appli
       <h3>🏛️ JanMitra — AI Civic Issue Reporting Platform</h3>
       <p>Full-stack civic issue reporting platform built to help citizens report, track, and manage civic issues. Includes issue submission, status tracking, notifications, rewards, search and filtering, location-based visualization, and AI-assisted issue classification.</p>
       <p><code>Python</code> • <code>Django</code> • <code>JavaScript</code> • <code>HTML/CSS</code> • <code>SQL</code> • <code>REST APIs</code> • <code>Gemini API</code> • <code>Leaflet</code></p>
-      <p>🔗 <a href="https://github.com/tulsikumar18/JanMitra"><b>View Repository →</b></a> &nbsp;|&nbsp; 🌐 <a href="https://janmitra-in-django.onrender.com"><b>Live Demo →</b></a> &nbsp;|&nbsp; 🎥 <a href="https://drive.google.com/file/d/1aYaxH5cLpfeuPLmhs3hzhXONh7Na-Wl_/view?usp=sharing"><b>Watch Demo Video</b></a></p>
+      <p>🔗 <a href="https://github.com/tulsikumar18/JanMitra"><b>View Repository →</b></a> &nbsp;|&nbsp; 🌐 <a href="https://janmitra-in-django.onrender.com"><b>Live Demo →</b></a> &nbsp;|&nbsp;
     </td>
   </tr>
 
