@@ -8,7 +8,7 @@
 
 # Hi, I'm Tulsi Kumar Yadav 👋
 
-### **Software Engineer • Python Developer • AI/ML Engineer • Backend Developer**
+### **Software Engineer • AI/ML Engineer • LLM & RAG Developer • Backend Engineer**
 
 <p align="center">
   <a href="https://github.com/tulsikumar18">
@@ -40,25 +40,23 @@
 
 ## ⚡ About Me
 
-I am a Computer Science and Engineering graduate specializing in Data Science, with hands-on experience building Python-based web applications, REST APIs, database-driven systems, and AI-powered applications.
-
-I enjoy building practical software that combines backend engineering, web technologies, databases, and Generative AI to solve real-world problems.
+I am a software engineer focused on building practical AI systems, LLM/RAG applications, and scalable backend APIs. I enjoy transforming complex technical concepts into clean, reliable, and high-performance software solutions.
 
 <br />
 
 <table width="100%">
   <tr>
     <td width="33%" valign="top">
-      <h4>🐍 Python & Backend</h4>
-      <p>Building backend applications, REST APIs, database-driven systems, and scalable application workflows using Python, Django, FastAPI, and Flask.</p>
+      <h4>🤖 AI Systems</h4>
+      <p>Building AI-powered applications using Generative AI, LLMs, prompt engineering, and intelligent automation workflows.</p>
     </td>
     <td width="33%" valign="top">
-      <h4>🤖 AI & Automation</h4>
-      <p>Working with Generative AI, LLMs, prompt engineering, AI-assisted development, and intelligent application workflows.</p>
+      <h4>🔎 RAG Pipelines</h4>
+      <p>Developing Retrieval-Augmented Generation systems using embeddings, Sentence Transformers, FAISS, and semantic search.</p>
     </td>
     <td width="33%" valign="top">
-      <h4>🌐 Full-Stack Development</h4>
-      <p>Developing responsive web applications using HTML5, CSS3, JavaScript, Bootstrap, REST APIs, SQL, and modern client-server workflows.</p>
+      <h4>⚙️ Backend Engineering</h4>
+      <p>Designing database-driven applications and REST APIs using Python, Django, FastAPI, Flask, SQL, and Django ORM.</p>
     </td>
   </tr>
 </table>
@@ -81,14 +79,10 @@ I enjoy building practical software that combines backend engineering, web techn
 
   <tr>
     <td>
-      <h3>🏛️ JanMitra — AI-Powered Civic Issue Reporting Platform</h3>
-      <p>Full-stack civic issue reporting platform that enables citizens to report, track, and manage civic problems with AI-assisted issue classification, location-based visualization, notifications, rewards, and multilingual interactions.</p>
-      <p><code>Python</code> • <code>Django</code> • <code>JavaScript</code> • <code>HTML5</code> • <code>CSS3</code> • <code>SQL</code> • <code>REST APIs</code> • <code>Gemini API</code> • <code>Leaflet</code></p>
-      <p>
-        🔗 <a href="https://github.com/tulsikumar18/JanMitra"><b>View Repository →</b></a>
-        &nbsp;|&nbsp;
-        🌐 <b>Live Demo →</b> <i>Link to be added</i>
-      </p>
+      <h3>🏢 LLM Regulatory Intelligence System</h3>
+      <p>End-to-end AI application for processing regulatory documents and generating structured compliance insights. Implements document ingestion, preprocessing, semantic search, vector retrieval, and automated regulatory analysis to reduce manual compliance reporting effort by approximately 60%.</p>
+      <p><code>Python</code> • <code>FastAPI</code> • <code>LLMs</code> • <code>RAG</code> • <code>Sentence Transformers</code> • <code>FAISS</code></p>
+      <p>🔗 <a href="https://github.com/tulsikumar18/AI-Assisted-regulatory-For-Corep"><b>View Repository →</b></a></p>
     </td>
   </tr>
 
@@ -96,14 +90,11 @@ I enjoy building practical software that combines backend engineering, web techn
 
   <tr>
     <td>
-      <h3>🔎 LLM-Based Regulatory Intelligence System</h3>
-      <p>End-to-end AI application for processing regulatory documents and generating structured compliance insights. Includes document ingestion, preprocessing, semantic retrieval, vector search, and automated regulatory analysis.</p>
-      <p><code>Python</code> • <code>FastAPI</code> • <code>LLMs</code> • <code>RAG</code> • <code>Sentence Transformers</code> • <code>FAISS</code> • <code>JSON</code></p>
-      <p>
-        🔗 <a href="https://github.com/tulsikumar18/AI-Assisted-regulatory-For-Corep"><b>View Repository →</b></a>
-        &nbsp;|&nbsp;
-        ⚡ <b>Demo →</b> <i>Not provided</i>
-      </p>
+      <h3>🌾 AgriAid — Smart Agricultural Assistant</h3>
+      <p><b>🏆 1st Place Winner — Hacktopus Hackathon (50+ Teams)</b></p>
+      <p>Multimodal AI assistant supporting text, image, and voice inputs for agricultural problem solving, multilingual assistance, and AI-powered recommendations for improved accessibility.</p>
+      <p><code>Python</code> • <code>FastAPI</code> • <code>Computer Vision</code> • <code>NLP</code> • <code>Gemini API</code></p>
+      <p>🔗 <a href="https://github.com/tulsikumar18/AgriAid"><b>View Repository →</b></a> &nbsp;|&nbsp; 🎥 <a href="https://drive.google.com/file/d/13oJG7U6W43YkJlChiFagw9NCBynm2deI/view?usp=sharing"><b>Watch Demo Video</b></a></p>
     </td>
   </tr>
 
@@ -111,45 +102,10 @@ I enjoy building practical software that combines backend engineering, web techn
 
   <tr>
     <td>
-      <h3>🩺 Swasthya Margadarshika — Full-Stack Healthcare Web Application</h3>
-      <p>Full-stack healthcare web application built for personalized recommendations, multilingual interactions, and browser-based voice communication using AI services and web APIs.</p>
-      <p><code>Python</code> • <code>Flask</code> • <code>HTML5</code> • <code>CSS3</code> • <code>JavaScript</code> • <code>Bootstrap</code> • <code>Web Speech API</code></p>
-      <p>
-        🔗 <b>GitHub →</b> <i>Repository link to be added</i>
-        &nbsp;|&nbsp;
-        🌐 <b>Live Demo →</b> <i>Link to be added</i>
-      </p>
-    </td>
-  </tr>
-
-  <!-- Project 4 -->
-
-  <tr>
-    <td>
-      <h3>🌾 AgriAid — AI-Powered Agricultural Assistant</h3>
-      <p><b>🏆 1st Place Winner — Hacktopus Hackathon 2025 (50+ Teams)</b></p>
-      <p>Full-stack multimodal AI application supporting text, image, and voice inputs for agricultural problem solving, multilingual assistance, and AI-powered recommendations.</p>
-      <p><code>Python</code> • <code>FastAPI</code> • <code>AI/ML</code> • <code>Computer Vision</code> • <code>NLP</code> • <code>Gemini API</code></p>
-      <p>
-        🔗 <a href="https://github.com/tulsikumar18/AgriAid"><b>View Repository →</b></a>
-        &nbsp;|&nbsp;
-        🎥 <a href="https://drive.google.com/file/d/13oJG7U6W43YkJlChiFagw9NCBynm2deI/view?usp=sharing"><b>Watch Demo Video →</b></a>
-      </p>
-    </td>
-  </tr>
-
-  <!-- Project 5 -->
-
-  <tr>
-    <td>
-      <h3>🧠 IVIS Labs Promptathon — AI Presentation Generator</h3>
-      <p>AI-powered application that converts handwritten notes and diagrams into structured presentation slides using computer vision and AI-based recognition techniques.</p>
-      <p><code>AI/ML</code> • <code>Computer Vision</code> • <code>Generative AI</code> • <code>Python</code> • <code>PPT/PDF Generation</code></p>
-      <p>
-        🏆 <b>24-Hour Promptathon Project</b>
-        &nbsp;|&nbsp;
-        📜 <b>Certificate →</b> <i>Available on request</i>
-      </p>
+      <h3>🏛️ JanMitra — AI Civic Issue Reporting Platform</h3>
+      <p>Full-stack civic issue reporting platform built to help citizens report, track, and manage civic issues. Includes issue submission, status tracking, notifications, rewards, search and filtering, location-based visualization, and AI-assisted issue classification.</p>
+      <p><code>Python</code> • <code>Django</code> • <code>JavaScript</code> • <code>HTML/CSS</code> • <code>SQL</code> • <code>REST APIs</code> • <code>Gemini API</code> • <code>Leaflet</code></p>
+      <p>🔗 <a href="https://github.com/tulsikumar18/JanMitra"><b>View Repository →</b></a> &nbsp;|&nbsp; 🌐 <a href="https://janmitra-in-django.onrender.com"><b>Live Demo →</b></a> &nbsp;|&nbsp; 🎥 <a href="https://drive.google.com/file/d/1aYaxH5cLpfeuPLmhs3hzhXONh7Na-Wl_/view?usp=sharing"><b>Watch Demo Video</b></a></p>
     </td>
   </tr>
 
@@ -159,27 +115,26 @@ I enjoy building practical software that combines backend engineering, web techn
 
 <img src="assets/cosmic-divider.svg" width="100%" />
 
-## 🧰 Core Stack & Skills
+## 🧰 Core Stack & Achievements
 
-### 🐍 Programming & Backend
+### 💻 Programming & Web Development
 
 <p>
   <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5" />
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS3" />
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" />
+  <img src="https://img.shields.io/badge/Bootstrap-7952B3?style=flat-square&logo=bootstrap&logoColor=white" alt="Bootstrap" />
+</p>
+
+### ⚙️ Backend & APIs
+
+<p>
   <img src="https://img.shields.io/badge/Django-092E20?style=flat-square&logo=django&logoColor=white" alt="Django" />
   <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI" />
   <img src="https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white" alt="Flask" />
   <img src="https://img.shields.io/badge/REST_APIs-02569B?style=flat-square" alt="REST APIs" />
   <img src="https://img.shields.io/badge/Django_ORM-092E20?style=flat-square&logo=django&logoColor=white" alt="Django ORM" />
-</p>
-
-### 🌐 Frontend
-
-<p>
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5" />
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS3" />
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" />
-  <img src="https://img.shields.io/badge/Bootstrap-7952B3?style=flat-square&logo=bootstrap&logoColor=white" alt="Bootstrap" />
-  <img src="https://img.shields.io/badge/Responsive_Web_Design-4285F4?style=flat-square" alt="Responsive Web Design" />
 </p>
 
 ### 🗄️ Databases & Data
@@ -189,7 +144,6 @@ I enjoy building practical software that combines backend engineering, web techn
   <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white" alt="MySQL" />
   <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white" alt="MongoDB" />
   <img src="https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white" alt="SQLite" />
-  <img src="https://img.shields.io/badge/Relational_Data_Modeling-4479A1?style=flat-square" alt="Relational Data Modeling" />
 </p>
 
 ### 🤖 AI / ML & Generative AI
@@ -199,8 +153,8 @@ I enjoy building practical software that combines backend engineering, web techn
   <img src="https://img.shields.io/badge/LLMs-6E40C9?style=flat-square" alt="LLMs" />
   <img src="https://img.shields.io/badge/Prompt_Engineering-FF6F00?style=flat-square" alt="Prompt Engineering" />
   <img src="https://img.shields.io/badge/FAISS-00F2FE?style=flat-square" alt="FAISS" />
-  <img src="https://img.shields.io/badge/Scikit--learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white" alt="Scikit-learn" />
   <img src="https://img.shields.io/badge/Sentence_Transformers-412991?style=flat-square" alt="Sentence Transformers" />
+  <img src="https://img.shields.io/badge/Scikit--learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white" alt="Scikit-learn" />
   <img src="https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white" alt="NumPy" />
   <img src="https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white" alt="Pandas" />
 </p>
@@ -210,10 +164,10 @@ I enjoy building practical software that combines backend engineering, web techn
 <p>
   <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" alt="Git" />
   <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub" />
-  <img src="https://img.shields.io/badge/Unit_Testing-25A162?style=flat-square" alt="Unit Testing" />
-  <img src="https://img.shields.io/badge/Debugging-555555?style=flat-square" alt="Debugging" />
   <img src="https://img.shields.io/badge/OOP-007396?style=flat-square" alt="OOP" />
   <img src="https://img.shields.io/badge/DSA-FF6F00?style=flat-square" alt="Data Structures and Algorithms" />
+  <img src="https://img.shields.io/badge/Unit_Testing-25A162?style=flat-square" alt="Unit Testing" />
+  <img src="https://img.shields.io/badge/Debugging-555555?style=flat-square" alt="Debugging" />
 </p>
 
 > 🏆 **1st Place Winner** — Hacktopus Hackathon 2025 (AgriAid • 50+ Teams)
