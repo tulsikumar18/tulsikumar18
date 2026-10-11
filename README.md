@@ -27,9 +27,6 @@
     <img src="https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email" />
   </a>
   &nbsp;
-  <a href="https://tulsikumar-portfolio.vercel.app">
-    <img src="https://img.shields.io/badge/Portfolio-00F5A0?style=flat-square&logo=vercel&logoColor=black" alt="Portfolio" />
-  </a>
 </p>
 
 </div>
