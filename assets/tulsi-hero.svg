@@ -240,7 +240,7 @@
           font-size="14">
       Building practical software and AI-powered applications.
     </text>
-
+       
     <!-- Technology chips -->
     <g font-family="monospace" font-size="11">
       <rect x="60" y="251" width="82" height="25" rx="6"
