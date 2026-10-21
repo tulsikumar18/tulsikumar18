@@ -1,0 +1,21 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="42" viewBox="0 0 1000 42" fill="none">
+  <defs>
+    <linearGradient id="divider" x1="0" y1="0" x2="1000" y2="0">
+      <stop stop-color="#10070C" stop-opacity="0"/>
+      <stop offset=".25" stop-color="#701A3D"/>
+      <stop offset=".5" stop-color="#E5B5C7"/>
+      <stop offset=".75" stop-color="#701A3D"/>
+      <stop offset="1" stop-color="#10070C" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <path d="M0 21H435" stroke="url(#divider)" stroke-width="1.5"/>
+  <path d="M565 21H1000" stroke="url(#divider)" stroke-width="1.5"/>
+
+  <path d="M500 7L514 21L500 35L486 21Z" stroke="#C77B9B" stroke-width="1.5" fill="#451126"/>
+  <circle cx="500" cy="21" r="4" fill="#E5B5C7"/>
+
+  <circle cx="450" cy="21" r="2" fill="#701A3D"/>
+  <circle cx="550" cy="21" r="2" fill="#701A3D"/>
+</svg>
