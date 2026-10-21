@@ -37,13 +37,11 @@ My project work focuses on building full-stack applications, Python backend serv
 
 I'm interested in opportunities where I can contribute to real engineering problems, strengthen my technical skills, and build useful software.
 
-<img src="assets/tulsi-divider.svg" width="100%" alt="" />
-
-## 🍷 Featured Projects
-
 <p align="center">
   <img src="assets/tulsi-divider.svg" width="100%" alt="Burgundy divider"/>
 </p>
+
+## 🍷 Featured Projects
 
 <table>
 <tr>
@@ -155,7 +153,6 @@ A multimodal assistant designed to make agricultural support more accessible thr
   <img src="assets/tulsi-divider.svg" width="100%" alt="Burgundy divider"/>
 </p>
 
-<img src="assets/tulsi-divider.svg" width="100%" alt="" />
 
 ## Technical Skills
 
@@ -243,13 +240,11 @@ Affiliated with Visvesvaraya Technological University (VTU)
 - **IBM Certified SQL Developer — 2024.**
 - **Oracle Certified Generative AI Professional — 2025.**
 
-<img src="assets/tulsi-divider.svg" width="100%" alt="" />
-
-## 📈 GitHub Contributions
-
 <p align="center">
   <img src="assets/tulsi-divider.svg" width="100%" alt="Animated burgundy divider"/>
 </p>
+
+## 📈 GitHub Contributions
 
 <p align="center">
   <a href="https://github.com/tulsikumar18">
