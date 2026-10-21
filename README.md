@@ -4,7 +4,7 @@
 
 # Tulsi Kumar Yadav
 
-### Software Engineer · AI/ML Engineer · LLM & RAG Developer
+### Software Engineer · Python Full Stack Developer · LLM & RAG Developer
 
 *Building practical AI applications and reliable backend systems.*
 
@@ -39,74 +39,121 @@ I'm interested in opportunities where I can contribute to real engineering probl
 
 <img src="assets/tulsi-divider.svg" width="100%" alt="" />
 
-## Featured Projects
+## 🍷 Featured Projects
 
-### 01 — JanMitra
-**AI-Powered Civic Issue Reporting Platform**
+<p align="center">
+  <img src="assets/tulsi-divider.svg" width="100%" alt="Burgundy divider"/>
+</p>
 
-A full-stack civic-tech application that helps citizens report and track civic issues while supporting government-side review and resolution workflows.
+<table>
+<tr>
+<td width="50%" valign="top">
 
-- Developed issue submission, status tracking, notifications, rewards, search, and filtering.
-- Built relational data models and backend workflows using Django ORM and SQL.
-- Integrated Gemini APIs for AI-assisted issue classification and text, image, and voice-based reporting.
-- Created a location-based issue visualization interface using Leaflet.
+### 01 · JanMitra
 
-**Stack:** Python · Django · JavaScript · HTML5 · CSS3 · SQL · Gemini API · Leaflet
+**AI-Powered Civic Issue Reporting**
 
-[View Repository](https://github.com/tulsikumar18/JanMitra) · [Live Demo](https://janmitra-in-django.onrender.com)
+A civic-tech platform connecting citizen issue reporting with government review and resolution workflows.
 
----
+**Key features**
+- Issue reporting and status tracking
+- AI-assisted issue classification with Gemini
+- Image, text, and voice-based reporting
+- Notifications, rewards, and Leaflet maps
 
-### 02 — Swasthya Margadarshika
+**Built with**
+
+![Python](https://img.shields.io/badge/Python-451126?style=flat-square&logo=python&logoColor=E5B5C7)
+![Django](https://img.shields.io/badge/Django-451126?style=flat-square&logo=django&logoColor=E5B5C7)
+![JavaScript](https://img.shields.io/badge/JavaScript-451126?style=flat-square&logo=javascript&logoColor=E5B5C7)
+![SQL](https://img.shields.io/badge/SQL-451126?style=flat-square&logo=postgresql&logoColor=E5B5C7)
+
+[**↗ Repository**](https://github.com/tulsikumar18/JanMitra) · [**Live Demo**](https://janmitra-in-django.onrender.com)
+
+</td>
+<td width="50%" valign="top">
+
+### 02 · Swasthya Margadarshika
+
 **ML-Powered Healthcare Platform**
 
-A healthcare-oriented application that combines symptom analysis, machine learning-based disease prediction, and dataset-driven health recommendations.
+A healthcare-oriented application combining symptom analysis, machine-learning-based disease prediction, and dataset-driven recommendations.
 
-- Developed REST APIs using FastAPI and Pydantic validation.
-- Implemented disease prediction using an ensemble of SVC, MultinomialNB, and Random Forest.
-- Integrated Gemini API for symptom interpretation.
-- Implemented recommendation workflows for medications, precautions, diet, and lifestyle.
-- Added session management, environment-based configuration, and pytest testing.
+**Key features**
+- FastAPI REST APIs with Pydantic validation
+- Ensemble prediction using SVC, MultinomialNB, and Random Forest
+- Gemini-powered symptom interpretation
+- Recommendations for medications, precautions, diet, and lifestyle
 
-**Stack:** Python · FastAPI · Scikit-learn · JavaScript · HTML · CSS · Bootstrap · Pydantic · Gemini API
+**Built with**
 
-[Open Live Demo](https://swasthya-margadarshika.onrender.com)
+![Python](https://img.shields.io/badge/Python-451126?style=flat-square&logo=python&logoColor=E5B5C7)
+![FastAPI](https://img.shields.io/badge/FastAPI-451126?style=flat-square&logo=fastapi&logoColor=E5B5C7)
+![Scikit-learn](https://img.shields.io/badge/Scikit--learn-451126?style=flat-square&logo=scikitlearn&logoColor=E5B5C7)
+![Gemini](https://img.shields.io/badge/Gemini_API-451126?style=flat-square&logo=googlegemini&logoColor=E5B5C7)
 
-*This project is for educational and informational purposes and is not a substitute for professional medical advice.*
+[**Live Demo ↗**](https://swasthya-margadarshika.onrender.com)
 
----
+</td>
+</tr>
 
-### 03 — LLM-Based Regulatory Intelligence System
-**Document Processing & Semantic Retrieval**
+<tr>
+<td width="50%" valign="top">
 
-An AI application designed to process regulatory documents and generate structured compliance insights through document ingestion, semantic retrieval, and LLM-based processing.
+### 03 · Regulatory Intelligence
 
-- Built document ingestion and preprocessing workflows for PDF and HTML files.
-- Implemented semantic search using Sentence Transformers and FAISS.
-- Developed modular processing workflows for structured outputs and regulatory insight extraction.
-- Used API-driven and JSON-based processing to organize document analysis.
+**LLM-Based Document Intelligence**
 
-**Stack:** Python · FastAPI · LLMs · RAG · Sentence Transformers · FAISS
+An AI application for processing regulatory documents and retrieving relevant information to support structured compliance analysis.
 
-[View Repository](https://github.com/tulsikumar18/AI-Assisted-regulatory-For-Corep)
+**Key features**
+- PDF and HTML document ingestion
+- Semantic search using Sentence Transformers
+- FAISS-based retrieval
+- Structured outputs from document analysis workflows
 
----
+**Built with**
 
-### 04 — AgriAid
+![Python](https://img.shields.io/badge/Python-451126?style=flat-square&logo=python&logoColor=E5B5C7)
+![FastAPI](https://img.shields.io/badge/FastAPI-451126?style=flat-square&logo=fastapi&logoColor=E5B5C7)
+![RAG](https://img.shields.io/badge/RAG-451126?style=flat-square&logoColor=E5B5C7)
+![FAISS](https://img.shields.io/badge/FAISS-451126?style=flat-square&logoColor=E5B5C7)
+
+[**↗ View Repository**](https://github.com/tulsikumar18/AI-Assisted-regulatory-For-Corep)
+
+</td>
+<td width="50%" valign="top">
+
+### 04 · AgriAid
+
 **AI-Powered Agricultural Assistant**
 
-A multimodal agricultural assistant developed to make AI-powered agricultural support more accessible through text, image, voice, and multilingual interactions.
+A multimodal assistant designed to make agricultural support more accessible through text, image, voice, and multilingual interactions.
 
-- Built workflows for processing different user input types.
-- Integrated external AI services to generate assistance and recommendations.
-- Developed multilingual and voice-based interaction features.
-- Collaborated on debugging, testing, and improving application functionality.
+**Key features**
+- Multiple input modes
+- AI-generated assistance and recommendations
+- Voice and multilingual interactions
+- Agricultural support workflows
 
-**Stack:** Python · FastAPI · Computer Vision · NLP · Gemini API
+**Built with**
+
+![Python](https://img.shields.io/badge/Python-451126?style=flat-square&logo=python&logoColor=E5B5C7)
+![AI](https://img.shields.io/badge/Artificial_Intelligence-451126?style=flat-square&logoColor=E5B5C7)
+![NLP](https://img.shields.io/badge/NLP-451126?style=flat-square&logoColor=E5B5C7)
+![Computer Vision](https://img.shields.io/badge/Computer_Vision-451126?style=flat-square&logoColor=E5B5C7)
 
 **Achievement:** First place among 50+ teams in a hackathon.
 
-[View Repository](https://github.com/tulsikumar18/AgriAid) · [Watch Demo](https://drive.google.com/file/d/13oJG7U6W43YkJlChiFagw9NCBynm2deI/view?usp=sharing)
+[**↗ View Repository**](https://github.com/tulsikumar18/AgriAid) · [**Watch Demo**](https://drive.google.com/file/d/13oJG7U6W43YkJlChiFagw9NCBynm2deI/view?usp=sharing)
+
+</td>
+</tr>
+</table>
+
+<p align="center">
+  <img src="assets/tulsi-divider.svg" width="100%" alt="Burgundy divider"/>
+</p>
 
 <img src="assets/tulsi-divider.svg" width="100%" alt="" />
 
@@ -191,22 +238,40 @@ Affiliated with Visvesvaraya Technological University (VTU)
 
 ## Achievements & Certifications
 
-- **Hackathon:** First place among 50+ teams for AgriAid.
+- **Hactopus Hackathon:** First place among 50+ teams for AgriAid.
 - **IVIS Labs Promptathon — March 2025:** Developed an AI-powered workflow for converting handwritten notes and diagrams into structured presentation slides.
 - **IBM Certified SQL Developer — 2024.**
 - **Oracle Certified Generative AI Professional — 2025.**
 
 <img src="assets/tulsi-divider.svg" width="100%" alt="" />
 
-## GitHub Contributions
+## 📈 GitHub Contributions
 
-<div align="center">
+<p align="center">
+  <img src="assets/tulsi-divider.svg" width="100%" alt="Animated burgundy divider"/>
+</p>
 
-<img src="https://ghchart.rshah.org/701A3D/tulsikumar18" alt="GitHub contribution activity for tulsikumar18" width="100%" />
+<p align="center">
+  <a href="https://github.com/tulsikumar18">
+    <img
+      src="https://ghchart.rshah.org/701A3D/tulsikumar18"
+      alt="GitHub contribution graph for Tulsi Kumar Yadav"
+      width="100%"
+    />
+  </a>
+</p>
 
-</div>
+<p align="center">
+  <img src="https://img.shields.io/badge/Code-451126?style=for-the-badge&logo=github&logoColor=E5B5C7" alt="Code"/>
+  <img src="https://img.shields.io/badge/Build-701A3D?style=for-the-badge&logo=githubactions&logoColor=F8F0F3" alt="Build"/>
+  <img src="https://img.shields.io/badge/Repeat-C77B9B?style=for-the-badge&logoColor=10070C" alt="Repeat"/>
+</p>
 
-*Contribution visualization provided by the external ghchart service. Availability and rendering depend on that service.*
+<p align="center">
+  <i>Consistent learning. Practical projects. Continuous improvement.</i>
+</p>
+
+<img src="assets/tulsi-divider.svg" width="100%" alt="" />
 
 ## Let's Connect
 
