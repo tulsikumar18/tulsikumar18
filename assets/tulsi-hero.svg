@@ -1,0 +1,50 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="300" viewBox="0 0 1000 300" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1000" y2="300" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#10070C"/>
+      <stop offset="0.55" stop-color="#451126"/>
+      <stop offset="1" stop-color="#190B12"/>
+    </linearGradient>
+    <linearGradient id="line" x1="100" y1="0" x2="900" y2="300">
+      <stop stop-color="#701A3D"/>
+      <stop offset="0.5" stop-color="#E5B5C7"/>
+      <stop offset="1" stop-color="#701A3D"/>
+    </linearGradient>
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M30 0H0V30" stroke="#C77B9B" stroke-opacity=".10" fill="none"/>
+    </pattern>
+  </defs>
+
+  <rect width="1000" height="300" rx="20" fill="url(#bg)"/>
+  <rect width="1000" height="300" rx="20" fill="url(#grid)"/>
+
+  <circle cx="830" cy="65" r="115" stroke="#C77B9B" stroke-opacity=".18"/>
+  <circle cx="830" cy="65" r="82" stroke="#C77B9B" stroke-opacity=".22"/>
+  <circle cx="830" cy="65" r="49" stroke="#E5B5C7" stroke-opacity=".25"/>
+
+  <g fill="#E5B5C7" opacity=".8">
+    <circle cx="780" cy="90" r="3"/>
+    <circle cx="875" cy="35" r="4"/>
+    <circle cx="900" cy="110" r="2"/>
+    <circle cx="730" cy="45" r="2"/>
+    <circle cx="850" cy="150" r="3"/>
+  </g>
+
+  <path d="M670 200L740 155L790 180L850 125L920 155L970 110"
+        stroke="url(#line)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        stroke-dasharray="8 8">
+    <animate attributeName="stroke-dashoffset" from="100" to="0" dur="8s" repeatCount="indefinite"/>
+  </path>
+
+  <text x="65" y="72" fill="#C77B9B" font-family="monospace" font-size="15" letter-spacing="4">HELLO, WORLD — I'M</text>
+  <text x="62" y="132" fill="#F8F0F3" font-family="Arial, Helvetica, sans-serif" font-size="43" font-weight="700">TULSI KUMAR YADAV</text>
+  <rect x="65" y="153" width="95" height="3" rx="1.5" fill="#C77B9B"/>
+
+  <text x="65" y="190" fill="#E5B5C7" font-family="monospace" font-size="17">Software Engineer · AI/ML · LLM &amp; RAG</text>
+  <text x="65" y="225" fill="#F8F0F3" fill-opacity=".7" font-family="Arial, Helvetica, sans-serif" font-size="14">Building practical software and AI-powered applications.</text>
+
+  <text x="65" y="270" fill="#C77B9B" font-family="monospace" font-size="12">PYTHON  /  DJANGO  /  FASTAPI  /  MACHINE LEARNING</text>
+
+  <path d="M20 245V20H980V280H20Z" stroke="#C77B9B" stroke-opacity=".25" stroke-width="1" fill="none"/>
+</svg>
