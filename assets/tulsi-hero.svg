@@ -1,50 +1,273 @@
 
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="300" viewBox="0 0 1000 300" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1000" height="320" viewBox="0 0 1000 320"
+     fill="none" role="img"
+     aria-labelledby="title desc">
+
+  <title id="title">Tulsi Kumar Yadav — Developer Portfolio</title>
+  <desc id="desc">Animated burgundy portfolio banner featuring Python, full-stack development, AI, and RAG.</desc>
+
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1000" y2="300" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#10070C"/>
-      <stop offset="0.55" stop-color="#451126"/>
-      <stop offset="1" stop-color="#190B12"/>
+    <!-- Animated burgundy background -->
+    <linearGradient id="bg" x1="0" y1="0" x2="1000" y2="320"
+                    gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#10070C"/>
+      <stop offset=".48" stop-color="#451126"/>
+      <stop offset="1" stop-color="#190B12">
+        <animate attributeName="stop-color"
+                 values="#190B12;#351020;#190B12"
+                 dur="10s" repeatCount="indefinite"/>
+      </stop>
+      <animate attributeName="x1" values="0;120;0"
+               dur="12s" repeatCount="indefinite"/>
     </linearGradient>
-    <linearGradient id="line" x1="100" y1="0" x2="900" y2="300">
+
+    <!-- Shimmering accent -->
+    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="0"
+                    gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#701A3D"/>
+      <stop offset=".48" stop-color="#F8F0F3"/>
+      <stop offset="1" stop-color="#C77B9B"/>
+      <animate attributeName="x1" values="-1;0;1"
+               dur="5s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <linearGradient id="circuit" x1="650" y1="100" x2="980" y2="250"
+                    gradientUnits="userSpaceOnUse">
       <stop stop-color="#701A3D"/>
-      <stop offset="0.5" stop-color="#E5B5C7"/>
-      <stop offset="1" stop-color="#701A3D"/>
+      <stop offset=".5" stop-color="#E5B5C7"/>
+      <stop offset="1" stop-color="#C77B9B"/>
     </linearGradient>
-    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
-      <path d="M30 0H0V30" stroke="#C77B9B" stroke-opacity=".10" fill="none"/>
+
+    <radialGradient id="ambient">
+      <stop stop-color="#C77B9B" stop-opacity=".20"/>
+      <stop offset="1" stop-color="#451126" stop-opacity="0"/>
+    </radialGradient>
+
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" stroke="#C77B9B"
+            stroke-opacity=".075" stroke-width=".8"/>
     </pattern>
+
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="15"/>
+    </filter>
+
+    <clipPath id="clip">
+      <rect width="1000" height="320" rx="22"/>
+    </clipPath>
   </defs>
 
-  <rect width="1000" height="300" rx="20" fill="url(#bg)"/>
-  <rect width="1000" height="300" rx="20" fill="url(#grid)"/>
+  <!-- Background -->
+  <g clip-path="url(#clip)">
+    <rect width="1000" height="320" fill="url(#bg)"/>
+    <rect width="1000" height="320" fill="url(#grid)"/>
 
-  <circle cx="830" cy="65" r="115" stroke="#C77B9B" stroke-opacity=".18"/>
-  <circle cx="830" cy="65" r="82" stroke="#C77B9B" stroke-opacity=".22"/>
-  <circle cx="830" cy="65" r="49" stroke="#E5B5C7" stroke-opacity=".25"/>
+    <ellipse cx="790" cy="145" rx="270" ry="200" fill="url(#ambient)">
+      <animate attributeName="rx" values="240;290;240"
+               dur="8s" repeatCount="indefinite"/>
+    </ellipse>
 
-  <g fill="#E5B5C7" opacity=".8">
-    <circle cx="780" cy="90" r="3"/>
-    <circle cx="875" cy="35" r="4"/>
-    <circle cx="900" cy="110" r="2"/>
-    <circle cx="730" cy="45" r="2"/>
-    <circle cx="850" cy="150" r="3"/>
+    <!-- Ambient glow -->
+    <circle cx="825" cy="100" r="90" fill="#701A3D"
+            fill-opacity=".10" filter="url(#softGlow)">
+      <animate attributeName="opacity" values=".3;.8;.3"
+               dur="6s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Fine border -->
+    <rect x="18" y="18" width="964" height="284" rx="15"
+          stroke="#C77B9B" stroke-opacity=".28"/>
+
+    <rect x="24" y="24" width="952" height="272" rx="11"
+          stroke="#E5B5C7" stroke-opacity=".06"/>
+
+    <!-- Decorative corner details -->
+    <path d="M40 70V40H70 M930 40H960V70
+             M40 250V280H70 M930 280H960V250"
+          stroke="#C77B9B" stroke-opacity=".65"
+          stroke-width="1.5"/>
+
+    <!-- Orbit rings -->
+    <g transform="translate(835 115)">
+      <circle r="112" stroke="#C77B9B" stroke-opacity=".15"/>
+      <circle r="82" stroke="#C77B9B" stroke-opacity=".23"/>
+      <circle r="52" stroke="#E5B5C7" stroke-opacity=".32"/>
+
+      <!-- Orbiting dot -->
+      <g>
+        <circle cx="0" cy="-82" r="4" fill="#F8F0F3" filter="url(#glow)"/>
+        <animateTransform attributeName="transform"
+                          type="rotate" from="0" to="360"
+                          dur="18s" repeatCount="indefinite"/>
+      </g>
+
+      <g>
+        <circle cx="112" cy="0" r="3" fill="#C77B9B"/>
+        <animateTransform attributeName="transform"
+                          type="rotate" from="360" to="0"
+                          dur="24s" repeatCount="indefinite"/>
+      </g>
+
+      <circle cx="0" cy="0" r="5" fill="#E5B5C7" filter="url(#glow)">
+        <animate attributeName="r" values="4;6;4"
+                 dur="3s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+
+    <!-- Floating particles -->
+    <g fill="#E5B5C7">
+      <circle cx="720" cy="72" r="2">
+        <animate attributeName="cy" values="72;55;72"
+                 dur="5s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values=".25;1;.25"
+                 dur="5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="940" cy="112" r="3">
+        <animate attributeName="cy" values="112;132;112"
+                 dur="6s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values=".3;.9;.3"
+                 dur="4s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="770" cy="205" r="2.5">
+        <animate attributeName="cy" values="205;190;205"
+                 dur="4s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="910" cy="225" r="2">
+        <animate attributeName="cy" values="225;240;225"
+                 dur="7s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="690" cy="245" r="2">
+        <animate attributeName="opacity" values=".2;.9;.2"
+                 dur="3s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+
+    <!-- Animated circuit path -->
+    <path d="M660 230L725 190L770 211L827 163L870 183L945 122"
+          stroke="url(#circuit)" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round"
+          stroke-dasharray="7 9" stroke-opacity=".8">
+      <animate attributeName="stroke-dashoffset"
+               values="0;-128" dur="5s" repeatCount="indefinite"/>
+    </path>
+
+    <!-- Circuit connection nodes -->
+    <g fill="#F8F0F3" filter="url(#glow)">
+      <circle cx="725" cy="190" r="2.5"/>
+      <circle cx="827" cy="163" r="2.5"/>
+      <circle cx="945" cy="122" r="2.5"/>
+    </g>
+
+    <!-- Animated vertical accent -->
+    <rect x="57" y="64" width="3" height="29" rx="1.5"
+          fill="#C77B9B">
+      <animate attributeName="height" values="8;29;8"
+               dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values=".4;1;.4"
+               dur="3s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- Intro label -->
+    <text x="75" y="83"
+          fill="#C77B9B"
+          font-family="monospace"
+          font-size="14"
+          letter-spacing="4">
+      HELLO, WORLD — I'M
+      <animate attributeName="opacity" values=".65;1;.65"
+               dur="4s" repeatCount="indefinite"/>
+    </text>
+
+    <!-- Name -->
+    <text x="58" y="139"
+          fill="#F8F0F3"
+          font-family="Arial, Helvetica, sans-serif"
+          font-size="43"
+          font-weight="700"
+          letter-spacing=".3">
+      TULSI KUMAR YADAV
+      <animate attributeName="opacity" values=".88;1;.88"
+               dur="6s" repeatCount="indefinite"/>
+    </text>
+
+    <!-- Shimmer underline -->
+    <rect x="60" y="158" width="112" height="3" rx="1.5"
+          fill="url(#shine)"/>
+
+    <rect x="60" y="158" width="112" height="3" rx="1.5"
+          fill="#C77B9B" opacity=".25" filter="url(#glow)"/>
+
+    <!-- Professional roles -->
+    <text x="60" y="194"
+          fill="#E5B5C7"
+          font-family="monospace"
+          font-size="16">
+      Software Engineer
+    </text>
+
+    <circle cx="247" cy="189" r="2.5" fill="#701A3D"/>
+
+    <text x="262" y="194"
+          fill="#E5B5C7"
+          font-family="monospace"
+          font-size="16">
+      Python Full-Stack Developer
+    </text>
+
+    <circle cx="518" cy="189" r="2.5" fill="#701A3D"/>
+
+    <text x="533" y="194"
+          fill="#E5B5C7"
+          font-family="monospace"
+          font-size="16">
+      LLM &amp; RAG
+    </text>
+
+    <!-- Supporting line -->
+    <text x="60" y="228"
+          fill="#F8F0F3"
+          fill-opacity=".78"
+          font-family="Arial, Helvetica, sans-serif"
+          font-size="14">
+      Building practical software and AI-powered applications.
+    </text>
+
+    <!-- Technology chips -->
+    <g font-family="monospace" font-size="11">
+      <rect x="60" y="251" width="82" height="25" rx="6"
+            fill="#451126" stroke="#C77B9B" stroke-opacity=".5"/>
+      <text x="101" y="267" fill="#F8F0F3" text-anchor="middle">PYTHON</text>
+
+      <rect x="151" y="251" width="82" height="25" rx="6"
+            fill="#451126" stroke="#C77B9B" stroke-opacity=".5"/>
+      <text x="192" y="267" fill="#F8F0F3" text-anchor="middle">DJANGO</text>
+
+      <rect x="242" y="251" width="91" height="25" rx="6"
+            fill="#451126" stroke="#C77B9B" stroke-opacity=".5"/>
+      <text x="287.5" y="267" fill="#F8F0F3" text-anchor="middle">FASTAPI</text>
+
+      <rect x="342" y="251" width="142" height="25" rx="6"
+            fill="#451126" stroke="#C77B9B" stroke-opacity=".5"/>
+      <text x="413" y="267" fill="#F8F0F3" text-anchor="middle">MACHINE LEARNING</text>
+    </g>
+
+    <!-- Scanning light along bottom edge -->
+    <rect x="30" y="298" width="140" height="1.5"
+          fill="url(#shine)" opacity=".9">
+      <animateTransform attributeName="transform"
+                        type="translate"
+                        values="-160 0;990 0;-160 0"
+                        dur="9s" repeatCount="indefinite"/>
+    </rect>
+
   </g>
-
-  <path d="M670 200L740 155L790 180L850 125L920 155L970 110"
-        stroke="url(#line)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-        stroke-dasharray="8 8">
-    <animate attributeName="stroke-dashoffset" from="100" to="0" dur="8s" repeatCount="indefinite"/>
-  </path>
-
-  <text x="65" y="72" fill="#C77B9B" font-family="monospace" font-size="15" letter-spacing="4">HELLO, WORLD — I'M</text>
-  <text x="62" y="132" fill="#F8F0F3" font-family="Arial, Helvetica, sans-serif" font-size="43" font-weight="700">TULSI KUMAR YADAV</text>
-  <rect x="65" y="153" width="95" height="3" rx="1.5" fill="#C77B9B"/>
-
-  <text x="65" y="190" fill="#E5B5C7" font-family="monospace" font-size="17">Software Engineer · AI/ML · LLM &amp; RAG</text>
-  <text x="65" y="225" fill="#F8F0F3" fill-opacity=".7" font-family="Arial, Helvetica, sans-serif" font-size="14">Building practical software and AI-powered applications.</text>
-
-  <text x="65" y="270" fill="#C77B9B" font-family="monospace" font-size="12">PYTHON  /  DJANGO  /  FASTAPI  /  MACHINE LEARNING</text>
-
-  <path d="M20 245V20H980V280H20Z" stroke="#C77B9B" stroke-opacity=".25" stroke-width="1" fill="none"/>
 </svg>
